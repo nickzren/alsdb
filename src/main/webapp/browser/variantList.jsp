@@ -61,10 +61,10 @@
     <thead>
         <tr style="font-weight:bold;">
             <td>Variant</td>
+            <td>Transcript</td>
+            <td>AA Change</td>
             <td>Consequence</td>
             <td>Allele Count</td>
-            <td>Sample Count</td>
-            <td>Homozygous Count</td>
             <td>Minor Allele Frequency</td>
             <td>CADD Score</td>
         </tr> 
@@ -81,16 +81,16 @@
             </a>
         </td>
         <td>
+            <%=variant.getAnnotation().getTranscript()%>
+        </td>
+        <td>
+            <%=variant.getAnnotation().getAaChange()%>
+        </td>
+        <td>
             <%=variant.getAnnotation().getConsequence()%>
         </td>
         <td>
             <%=variant.getAlleleCount()%>
-        </td>
-        <td>
-            <%=variant.getSampleCount()%>
-        </td>
-        <td>
-            <%=variant.getHomozygousCount()%>
         </td>
         <td>
             <%=variant.getMaf()%>
