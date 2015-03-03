@@ -23,7 +23,14 @@
             <span class="label label-default" >
                 Variant Count: <%=variantList.size()%>
             </span>
-            <%}%>
+            <%}
+                if (!query.contains(":")) // gene
+                {%>
+            &nbsp;
+            <span class="label label-default">
+                RVIS Percentile: <%=variantList.get(0).getAll01MafRvisPercentile()%>
+            </span>
+            <%} %>
         </h4>
     </div>
 

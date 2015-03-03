@@ -1,5 +1,6 @@
 package igm.alsdb.object;
 
+import igm.alsdb.global.Data;
 import igm.alsdb.util.DBManager;
 import igm.alsdb.util.FormatManager;
 import java.sql.ResultSet;
@@ -39,6 +40,9 @@ public class Variant {
     private float evsEurMaf;
     private float evsAfrMaf;
     private float evsAllMaf;
+    private String evsFilter;
+    private String annodbFilter;
+    private String hweFilter;
 
     public static final String title
             = "Chrom,"
@@ -67,7 +71,10 @@ public class Variant {
             + "ExAC Oth Maf,"
             + "Evs Eur Maf,"
             + "Evs Afr Maf,"
-            + "Evs All Maf";
+            + "Evs All Maf,"
+            + "Evs Filter,"
+            + "Annodb Filter,"
+            + "HWE Filter";
 
     private Annotation annotation; // most damaging one
 
@@ -86,11 +93,15 @@ public class Variant {
         majorHom = rset.getInt("major_hom");
         het = rset.getInt("het");
         minorHom = rset.getInt("minor_hom");
-        maf =rset.getFloat("case_maf");
+        maf = rset.getFloat("case_maf");
         hweP = rset.getFloat("case_hwe_p");
 
-        rivsAll01MafPercentile = FormatManager.getFloat(rset.getObject("rvis_all_01maf_percentile"));
-        rivsOeratioPercentile = FormatManager.getFloat(rset.getObject("rvis_oeratio_percentile"));
+        float tmp = FormatManager.getFloat(rset.getObject("rvis_all_01maf_percentile"));
+        rivsAll01MafPercentile = tmp == Data.NA ? Data.NA : tmp * 100;
+
+        tmp = FormatManager.getFloat(rset.getObject("rvis_oeratio_percentile"));
+        rivsOeratioPercentile = tmp == Data.NA ? Data.NA : tmp * 100;
+
         rivsEdgecase = rset.getString("rvis_edgecase");
 
         exacGlobalMaf = FormatManager.getFloat(rset.getObject("exac_global_maf"));
@@ -105,6 +116,10 @@ public class Variant {
         evsEurMaf = FormatManager.getFloat(rset.getObject("evs_eur_maf"));
         evsAfrMaf = FormatManager.getFloat(rset.getObject("evs_afr_maf"));
         evsAllMaf = FormatManager.getFloat(rset.getObject("evs_all_maf"));
+        evsFilter = FormatManager.getString(rset.getString("evs_filter"));
+
+        annodbFilter = FormatManager.getString(rset.getString("annodb_filter"));
+        hweFilter = FormatManager.getString(rset.getString("HWE_filter"));
     }
 
     public void initAnnotationMap() throws Exception {
@@ -181,6 +196,16 @@ public class Variant {
         return annotation;
     }
 
+    public String getAll01MafRvisPercentile() {
+        String value = FormatManager.getString(rivsAll01MafPercentile);
+
+        if (value.equals("-")) {
+            return "NA";
+        }
+
+        return value + "%";
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -190,7 +215,7 @@ public class Variant {
         sb.append(allele).append(",");
         sb.append(type).append(",");
         sb.append(isMinorRef).append(",");
-        sb.append(cScore).append(",");
+        sb.append(FormatManager.getString(cScore)).append(",");
 
         sb.append(annotation.toString()).append(",");
 
@@ -200,22 +225,25 @@ public class Variant {
         sb.append(maf).append(",");
         sb.append(hweP).append(",");
 
-        sb.append(rivsAll01MafPercentile).append(",");
-        sb.append(rivsOeratioPercentile).append(",");
+        sb.append(FormatManager.getString(rivsAll01MafPercentile)).append(",");
+        sb.append(FormatManager.getString(rivsOeratioPercentile)).append(",");
         sb.append(rivsEdgecase).append(",");
 
-        sb.append(exacGlobalMaf).append(",");
-        sb.append(exacAfrMaf).append(",");
-        sb.append(exacAmrMaf).append(",");
-        sb.append(exacEasMaf).append(",");
-        sb.append(exacSasMaf).append(",");
-        sb.append(exacFinMaf).append(",");
-        sb.append(exacNfeMaf).append(",");
-        sb.append(exacOthMaf).append(",");
+        sb.append(FormatManager.getString(exacGlobalMaf)).append(",");
+        sb.append(FormatManager.getString(exacAfrMaf)).append(",");
+        sb.append(FormatManager.getString(exacAmrMaf)).append(",");
+        sb.append(FormatManager.getString(exacEasMaf)).append(",");
+        sb.append(FormatManager.getString(exacSasMaf)).append(",");
+        sb.append(FormatManager.getString(exacFinMaf)).append(",");
+        sb.append(FormatManager.getString(exacNfeMaf)).append(",");
+        sb.append(FormatManager.getString(exacOthMaf)).append(",");
 
-        sb.append(evsEurMaf).append(",");
-        sb.append(evsAfrMaf).append(",");
-        sb.append(evsAllMaf);
+        sb.append(FormatManager.getString(evsEurMaf)).append(",");
+        sb.append(FormatManager.getString(evsAfrMaf)).append(",");
+        sb.append(FormatManager.getString(evsAllMaf)).append(",");
+        sb.append(evsFilter).append(",");
+        sb.append(annodbFilter).append(",");
+        sb.append(hweFilter);
 
         return sb.toString();
     }
