@@ -27,14 +27,14 @@
                 </p>
 
                 <p>
-                    <a href="http://chgv.org/download/snps_indels_v1.txt.tar.gz">
-                        <strong>snps_indels_v1.txt.tar.gz</strong></a> 
+                    <a href="http://chgv.org/download/snps_indels_v1.txt.gz">
+                        <strong>snps_indels_v1.txt.gz</strong></a> 
                     (variant annotation file in tab-delimited text format)
                 </p>
 
                 <p>
-                    <a href="http://chgv.org/download/coverage.all_sites_v1.txt.tar.gz">
-                        <strong>coverage.all_sites_v1.txt.tar.gz</strong></a> 
+                    <a href="http://chgv.org/download/coverage.all_sites_v1.txt.gz">
+                        <strong>coverage.all_sites_v1.txt.gz</strong></a> 
                     (sequencing coverage file for all carrier and non-carrier sites within our target regions)
                 </p>
 
