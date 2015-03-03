@@ -45,36 +45,43 @@ public class Variant {
     private String hweFilter;
 
     public static final String title
-            = "Chrom,"
+            = "Chr,"
             + "Position,"
             + "Reference,"
-            + "Alternate,"
-            + "Variant Type,"
-            + "Is Minor Ref,"
-            + "CADD Score,"
+            + "Variant,"
+            + "Variant_type,"
+            + "Is_minor_ref,"
+            + "Major_homoz,"
+            + "Heteroz,"
+            + "Minor_homoz,"
+            + "Case_maf,"
+            + "Case_HWE_p,"
+            + "ExAC_global_maf,"
+            + "ExAC_afr_maf,"
+            + "ExAC_amr_maf,"
+            + "ExAC_eas_maf,"
+            + "ExAC_sas_maf,"
+            + "ExAC_fin_maf,"
+            + "ExAC_nfe_maf,"
+            + "ExAC_oth_maf,"
+            + "EVS_EA_maf,"
+            + "EVS_AA_maf,"
+            + "EVS_all_maf,"
+            + "RVIS_percentile,"
+            + "RVIS_Edgecase,"
+            + "OEratio_percentile,"
             + Annotation.title + ","
-            + "Major Hom,"
-            + "Het,"
-            + "Minor Hom,"
-            + "Maf,"
-            + "Hwe P,"
-            + "RVIS All 01Maf Percentile,"
-            + "RVIS Oeratio Percentile,"
-            + "RVIS Edgecase,"
-            + "ExAC Global Maf,"
-            + "ExAC Afr Maf ,"
-            + "ExAC Amr Maf,"
-            + "ExAC Eas Maf,"
-            + "ExAC Sas Maf,"
-            + "ExAC Fin Maf,"
-            + "ExAC Nfe Maf,"
-            + "ExAC Oth Maf,"
-            + "Evs Eur Maf,"
-            + "Evs Afr Maf,"
-            + "Evs All Maf,"
-            + "Evs Filter,"
-            + "Annodb Filter,"
-            + "HWE Filter";
+            + "C_score_phred,"
+            + "EVS_filter,"
+            + "AnnoDB_filter,"
+            + "HWE_filter";
+    
+    public static void main(String[] args)
+    {
+        for(String str : title.split(","))
+            
+            System.out.println(str);
+    }
 
     private Annotation annotation; // most damaging one
 
@@ -215,19 +222,11 @@ public class Variant {
         sb.append(allele).append(",");
         sb.append(type).append(",");
         sb.append(isMinorRef).append(",");
-        sb.append(FormatManager.getString(cScore)).append(",");
-
-        sb.append(annotation.toString()).append(",");
-
         sb.append(majorHom).append(",");
         sb.append(het).append(",");
         sb.append(minorHom).append(",");
         sb.append(maf).append(",");
         sb.append(hweP).append(",");
-
-        sb.append(FormatManager.getString(rivsAll01MafPercentile)).append(",");
-        sb.append(FormatManager.getString(rivsOeratioPercentile)).append(",");
-        sb.append(rivsEdgecase).append(",");
 
         sb.append(FormatManager.getString(exacGlobalMaf)).append(",");
         sb.append(FormatManager.getString(exacAfrMaf)).append(",");
@@ -241,6 +240,15 @@ public class Variant {
         sb.append(FormatManager.getString(evsEurMaf)).append(",");
         sb.append(FormatManager.getString(evsAfrMaf)).append(",");
         sb.append(FormatManager.getString(evsAllMaf)).append(",");
+
+        sb.append(FormatManager.getString(rivsAll01MafPercentile)).append(",");
+        sb.append(rivsEdgecase).append(",");
+        sb.append(FormatManager.getString(rivsOeratioPercentile)).append(",");
+
+        sb.append(annotation.toString()).append(",");
+
+        sb.append(FormatManager.getString(cScore)).append(",");
+
         sb.append(evsFilter).append(",");
         sb.append(annodbFilter).append(",");
         sb.append(hweFilter);

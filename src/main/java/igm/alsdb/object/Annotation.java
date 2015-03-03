@@ -19,13 +19,13 @@ public class Annotation {
     private String sift;
 
     public static final String title
-            = "Gene,"
+            = "HGNC,"
             + "Transcript,"
-            + "Codon Change,"
-            + "AA Change,"
+            + "Codon_change,"
+            + "AA_change,"
             + "CCDS,"
             + "Consequence,"
-            + "Polyphen Humvar,"
+            + "PolyPhen2_HumVar,"
             + "Sift";
 
     public Annotation(ResultSet rset) throws Exception {
