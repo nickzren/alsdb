@@ -11,6 +11,7 @@ public class Annotation {
 
     private String geneName;
     private String transcript;
+    private String canonical;
     private String codonChange;
     private String aaChange;
     private String ccds;
@@ -21,6 +22,7 @@ public class Annotation {
     public static final String title
             = "HGNC,"
             + "Transcript,"
+            + "Canonical,"
             + "Codon_change,"
             + "AA_change,"
             + "CCDS,"
@@ -31,6 +33,7 @@ public class Annotation {
     public Annotation(ResultSet rset) throws Exception {
         geneName = FormatManager.getString(rset.getString("gene_name"));
         transcript = FormatManager.getString(rset.getString("transcript"));
+        canonical = FormatManager.getString(rset.getString("canonical"));
         codonChange = FormatManager.getString(rset.getString("codon_change"));
         aaChange = FormatManager.getString(rset.getString("aa_change"));
         ccds = FormatManager.getString(rset.getString("ccds"));
@@ -77,6 +80,7 @@ public class Annotation {
 
         sb.append(geneName).append(",");
         sb.append(transcript).append(",");
+        sb.append(canonical).append(",");
         sb.append(codonChange).append(",");
         sb.append(aaChange).append(",");
         sb.append(ccds).append(",");

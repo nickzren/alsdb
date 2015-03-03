@@ -89,7 +89,7 @@ public class Output {
                     + "AND pos <= " + region.getEnd() + " AND ";
         }
 
-        sql += "TRUE";
+        sql += " TRUE ORDER BY chr,pos";
 
         return sql;
     }

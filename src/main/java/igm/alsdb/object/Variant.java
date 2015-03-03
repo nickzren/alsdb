@@ -24,6 +24,7 @@ public class Variant {
     private int majorHom;
     private int het;
     private int minorHom;
+    private int missingCoverage;
     private float maf;
     private float hweP;
     private float rivsAll01MafPercentile;
@@ -54,6 +55,7 @@ public class Variant {
             + "Major_homoz,"
             + "Heteroz,"
             + "Minor_homoz,"
+            + "QC_failed_samples,"
             + "Case_maf,"
             + "Case_HWE_p,"
             + "ExAC_global_maf,"
@@ -75,13 +77,6 @@ public class Variant {
             + "EVS_filter,"
             + "AnnoDB_filter,"
             + "HWE_filter";
-    
-    public static void main(String[] args)
-    {
-        for(String str : title.split(","))
-            
-            System.out.println(str);
-    }
 
     private Annotation annotation; // most damaging one
 
@@ -183,6 +178,10 @@ public class Variant {
         return 2 * minorHom + het;
     }
 
+    public int getSampleCount() {
+        return minorHom + het + majorHom;
+    }
+    
     public int getHomozygousCount() {
         return minorHom;
     }
@@ -225,6 +224,7 @@ public class Variant {
         sb.append(majorHom).append(",");
         sb.append(het).append(",");
         sb.append(minorHom).append(",");
+        sb.append(missingCoverage).append(",");
         sb.append(maf).append(",");
         sb.append(hweP).append(",");
 
