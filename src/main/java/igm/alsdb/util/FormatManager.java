@@ -10,19 +10,12 @@ import java.text.NumberFormat;
  */
 public class FormatManager {
 
-    private static NumberFormat pformat1 = new DecimalFormat("0.####");
-    private static NumberFormat pformat2 = new DecimalFormat("0.###E000");
-
     public static String getString(float value) {
         if (value == Data.NA) {
             return "-";
         }
 
-        if (value < 0.001 && value > 0) {
-            return pformat2.format(value);
-        } else {
-            return pformat1.format(value);
-        }
+        return String.valueOf(value);
     }
     
     public static boolean isNumeric(String str) {

@@ -19,17 +19,6 @@ public class Annotation {
     private String polyphenHumvar;
     private String sift;
 
-    public static final String title
-            = "HGNC,"
-            + "Transcript,"
-            + "Canonical,"
-            + "Codon_change,"
-            + "AA_change,"
-            + "CCDS,"
-            + "Consequence,"
-            + "PolyPhen2_HumVar,"
-            + "Sift";
-
     public Annotation(ResultSet rset) throws Exception {
         geneName = FormatManager.getString(rset.getString("gene_name"));
         transcript = FormatManager.getString(rset.getString("transcript"));
@@ -48,6 +37,10 @@ public class Annotation {
 
     public String getTranscript() {
         return transcript;
+    }
+    
+    public String getCanonical() {
+        return canonical;
     }
 
     public String getCodonChange() {

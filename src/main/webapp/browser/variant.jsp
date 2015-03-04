@@ -40,7 +40,7 @@
 } else {
 %>
 
-<table class="table table-condensed table-hover">
+<table class="table table-condensed table-hover text-center">
     <thead>
         <tr style="font-weight:bold;">
             <td>Gene</td>

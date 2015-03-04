@@ -1,6 +1,5 @@
 package igm.alsdb.object;
 
-import igm.alsdb.global.Data;
 import igm.alsdb.util.DBManager;
 import igm.alsdb.util.FormatManager;
 import java.sql.ResultSet;
@@ -24,7 +23,7 @@ public class Variant {
     private int majorHom;
     private int het;
     private int minorHom;
-    private int missingCoverage;
+    private int qcFailedSamples;
     private float maf;
     private float hweP;
     private float rivsAll01MafPercentile;
@@ -72,8 +71,16 @@ public class Variant {
             + "RVIS_percentile,"
             + "RVIS_Edgecase,"
             + "OEratio_percentile,"
-            + Annotation.title + ","
+            + "HGNC,"
+            + "Transcript,"
+            + "Canonical,"
+            + "Codon_change,"
+            + "AA_change,"
+            + "CCDS,"
+            + "Consequence,"
             + "C_score_phred,"
+            + "PolyPhen2_HumVar,"
+            + "Sift,"
             + "EVS_filter,"
             + "AnnoDB_filter,"
             + "HWE_filter";
@@ -95,15 +102,12 @@ public class Variant {
         majorHom = rset.getInt("major_hom");
         het = rset.getInt("het");
         minorHom = rset.getInt("minor_hom");
+        qcFailedSamples = rset.getInt("QC_failed_samples");
         maf = rset.getFloat("case_maf");
         hweP = rset.getFloat("case_hwe_p");
 
-        float tmp = FormatManager.getFloat(rset.getObject("rvis_all_01maf_percentile"));
-        rivsAll01MafPercentile = tmp == Data.NA ? Data.NA : tmp * 100;
-
-        tmp = FormatManager.getFloat(rset.getObject("rvis_oeratio_percentile"));
-        rivsOeratioPercentile = tmp == Data.NA ? Data.NA : tmp * 100;
-
+        rivsAll01MafPercentile = FormatManager.getFloat(rset.getObject("rvis_all_01maf_percentile"));
+        rivsOeratioPercentile = FormatManager.getFloat(rset.getObject("rvis_oeratio_percentile"));
         rivsEdgecase = rset.getString("rvis_edgecase");
 
         exacGlobalMaf = FormatManager.getFloat(rset.getObject("exac_global_maf"));
@@ -181,7 +185,7 @@ public class Variant {
     public int getSampleCount() {
         return minorHom + het + majorHom;
     }
-    
+
     public int getHomozygousCount() {
         return minorHom;
     }
@@ -224,7 +228,7 @@ public class Variant {
         sb.append(majorHom).append(",");
         sb.append(het).append(",");
         sb.append(minorHom).append(",");
-        sb.append(missingCoverage).append(",");
+        sb.append(qcFailedSamples).append(",");
         sb.append(maf).append(",");
         sb.append(hweP).append(",");
 
@@ -245,9 +249,16 @@ public class Variant {
         sb.append(rivsEdgecase).append(",");
         sb.append(FormatManager.getString(rivsOeratioPercentile)).append(",");
 
-        sb.append(annotation.toString()).append(",");
-
+        sb.append(annotation.getGeneName()).append(",");
+        sb.append(annotation.getTranscript()).append(",");
+        sb.append(annotation.getCanonical()).append(",");
+        sb.append(annotation.getCodonChange()).append(",");
+        sb.append(annotation.getAaChange()).append(",");
+        sb.append(annotation.getCcds()).append(",");
+        sb.append(annotation.getConsequence()).append(",");
         sb.append(FormatManager.getString(cScore)).append(",");
+        sb.append(annotation.getPolyphenHumvar()).append(",");
+        sb.append(annotation.getSift()).append(",");
 
         sb.append(evsFilter).append(",");
         sb.append(annodbFilter).append(",");
