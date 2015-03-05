@@ -23,13 +23,13 @@ public class SortTable extends HttpServlet {
                     || !Sort.column.equalsIgnoreCase(request.getParameter("column"))) {
                 Sort.init(request);
             }
+
+            setRequest(request);
+
+            request.getRequestDispatcher("browser.jsp").forward(request, response);
         } catch (Exception ex) {
-            Output.errorMsg = "error occurred!";
+            request.getRequestDispatcher("error.jsp").forward(request, response);
         }
-
-        setRequest(request);
-
-        request.getRequestDispatcher("browser.jsp").forward(request, response);
     }
 
     private void setRequest(HttpServletRequest request) {

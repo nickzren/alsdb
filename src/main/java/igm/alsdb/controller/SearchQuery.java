@@ -32,14 +32,14 @@ public class SearchQuery extends HttpServlet {
                 Input.init(request);
 
                 Output.init();
+
+                setRequest(request);
+
+                request.getRequestDispatcher("browser.jsp").forward(request, response);
             }
         } catch (Exception ex) {
-            Output.errorMsg = "error occurred!";
+            request.getRequestDispatcher("error.jsp").forward(request, response);
         }
-
-        setRequest(request);
-
-        request.getRequestDispatcher("browser.jsp").forward(request, response);
     }
 
     private void setRequest(HttpServletRequest request) {
