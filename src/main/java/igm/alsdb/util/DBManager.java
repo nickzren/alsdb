@@ -41,23 +41,19 @@ public class DBManager {
                     + "org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer");
             dataSource = new DataSource();
             dataSource.setPoolProperties(p);
+            connection = dataSource.getConnection();
+            statement = connection.createStatement();
         }
 
-        connection = dataSource.getConnection();
-        statement = connection.createStatement();
+        if (connection.isClosed()) {
+            connection = dataSource.getConnection();
+            statement = connection.createStatement();
+        } else if (statement.isClosed()) {
+            statement = connection.createStatement();
+        }
     }
 
     public static ResultSet executeQuery(String sqlQuery) throws SQLException {
         return statement.executeQuery(sqlQuery);
-    }
-
-    public static void close() throws Exception {
-        if (statement != null) {
-            statement.close();
-        }
-
-        if (connection != null) {
-            connection.close();
-        }
     }
 }

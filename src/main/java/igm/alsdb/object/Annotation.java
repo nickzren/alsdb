@@ -18,6 +18,7 @@ public class Annotation {
     private String consequence;
     private String polyphenHumvar;
     private String sift;
+    private int igmRank;
 
     public Annotation(ResultSet rset) throws Exception {
         geneName = FormatManager.getString(rset.getString("gene_name"));
@@ -29,6 +30,7 @@ public class Annotation {
         consequence = FormatManager.getString(rset.getString("consequence"));
         polyphenHumvar = FormatManager.getString(rset.getString("polyphen_humvar"));
         sift = FormatManager.getString(rset.getString("sift"));
+        igmRank = rset.getInt("igm_rank");
     }
 
     public String getGeneName() {
@@ -38,7 +40,7 @@ public class Annotation {
     public String getTranscript() {
         return transcript;
     }
-    
+
     public String getCanonical() {
         return canonical;
     }
@@ -65,6 +67,10 @@ public class Annotation {
 
     public String getSift() {
         return sift;
+    }
+
+    public int getIgmRank() {
+        return igmRank;
     }
 
     @Override

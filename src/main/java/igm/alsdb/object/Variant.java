@@ -14,6 +14,7 @@ public class Variant {
 
     private int id;
     private String chr;
+    private int chrInt;
     private int position;
     private String ref;
     private String allele;
@@ -93,6 +94,15 @@ public class Variant {
     public Variant(ResultSet rset) throws Exception {
         id = rset.getInt("variant_id");
         chr = rset.getString("chr");
+
+        if (chr.equalsIgnoreCase("X")) {
+            chrInt = 23;
+        } else if (chr.equalsIgnoreCase("Y")) {
+            chrInt = 24;
+        } else {
+            chrInt = Integer.parseInt(chr);
+        }
+
         position = rset.getInt("pos");
         ref = rset.getString("ref");
         allele = rset.getString("allele");
@@ -165,6 +175,10 @@ public class Variant {
         return chr;
     }
 
+    public int getChrInt() {
+        return chrInt;
+    }
+    
     public int getPosition() {
         return position;
 

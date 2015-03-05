@@ -1,9 +1,10 @@
-package igm.alsdb.servlet;
+package igm.alsdb.controller;
 
 import igm.alsdb.model.Download;
 import igm.alsdb.util.DBManager;
 import igm.alsdb.model.Input;
 import igm.alsdb.model.Output;
+import igm.alsdb.model.Sort;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -14,35 +15,26 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Nick
  */
-public class Controller extends HttpServlet {
+public class SearchQuery extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            if (request.getParameter("query") != null) {
-                doSearchQuery(request, response);
-            } 
-        } catch (Exception ex) {
-            request.getRequestDispatcher("error.jsp").forward(request, response);
-        }
-    }
+            if (Input.query == null
+                    || !Input.query.equalsIgnoreCase(request.getParameter("query"))) {
 
-    private void doSearchQuery(HttpServletRequest request, HttpServletResponse response)
-            throws Exception {
-        if (Input.query == null
-                || !Input.query.equalsIgnoreCase(request.getParameter("query"))) {
+                if (Download.rootPath == null) {
+                    Download.rootPath = getServletContext().getRealPath("/download/");
+                }
 
-            if (Download.rootPath == null) {
-                Download.rootPath = getServletContext().getRealPath("/download/");
+                DBManager.init();
+
+                Input.init(request);
+
+                Output.init();
             }
-
-            DBManager.init();
-
-            Input.init(request);
-
-            Output.init();
-
-            DBManager.close();
+        } catch (Exception ex) {
+            Output.errorMsg = "error occurred!";
         }
 
         setRequest(request);
@@ -57,6 +49,7 @@ public class Controller extends HttpServlet {
         request.setAttribute("variantList", Output.variantList);
         request.setAttribute("errorMsg", Output.errorMsg);
         request.setAttribute("url", Download.url);
+        request.setAttribute("column", Sort.column);
     }
 
     @Override
@@ -73,6 +66,6 @@ public class Controller extends HttpServlet {
 
     @Override
     public String getServletInfo() {
-        return "alsdb site controller (MVC mode)";
+        return "alsdb search query";
     }
 }

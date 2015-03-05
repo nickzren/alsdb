@@ -9,13 +9,13 @@
             <%@include file="base/header.jsp" %>
 
             <div class="container-main">
-                <h3>Data Browser <span class="label label-info">beta</span></h3>
+                <h3>Data Browser <span class="label label-info">v1</span></h3>
 
                 <br/>
 
                 <div class="row">
                     <div class="col-md-7">
-                        <form class="form-search" action="Controller">
+                        <form class="form-search" action="SearchQuery">
                             <div class="input-group">
                                 <input name="query" class="form-control input-lg tt-input"
                                        type="text" placeholder="Search for a gene or region or variant" >
@@ -31,9 +31,9 @@
 
                 <p class="text-muted" style="margin-left: 10px">
                     Examples - 
-                    Gene: <a href="Controller?query=TBK1">TBK1</a>,
-                    Region: <a href="Controller?query=21:33032075-33040899">21:33032075-33040899</a>, 
-                    Variant: <a href="Controller?query=14-21162090-G-A">14-21162090-G-A</a>
+                    Gene: <a href="SearchQuery?query=TBK1">TBK1</a>,
+                    Region: <a href="SearchQuery?query=21:33032075-33040899">21:33032075-33040899</a>, 
+                    Variant: <a href="SearchQuery?query=14-21162090-G-A">14-21162090-G-A</a>
                 </p>
 
                 <br/>

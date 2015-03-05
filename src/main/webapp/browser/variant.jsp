@@ -61,7 +61,7 @@
 
     <tr>
         <td>
-            <a href="Controller?query=<%=annotation.getGeneName()%>">
+            <a href="SearchQuery?query=<%=annotation.getGeneName()%>">
                 <%=annotation.getGeneName()%>
             </a>
         </td>
