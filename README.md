@@ -1,1 +1,2 @@
-# alsdb
+# ALS Data Browser (ALSdb)
+
