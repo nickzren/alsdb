@@ -44,8 +44,6 @@
 
         <%@include file="base/footer.jsp" %>    
     </body>
-
-    <%@include file="base/js.jsp" %>  
 </html>
 
 

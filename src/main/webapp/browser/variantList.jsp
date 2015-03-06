@@ -60,23 +60,17 @@
 <table class="table table-condensed table-hover text-center">
     <thead>
         <tr style="font-weight:bold;">
-            <td>Variant 
-                <a href="SortTable?column=Variant">
-                    <span class="glyphicon glyphicon-triangle-top"></span>
-                </a>
+            <td>
+                <a href="SortTable?column=Variant">Variant</a>
             </td>
             <td>Transcript</td>
             <td>AA Change</td>
-            <td>Consequence 
-                <a href="SortTable?column=Consequence">
-                    <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </a>
+            <td>
+                <a href="SortTable?column=Consequence">Consequence</a>
             </td>
             <td>Allele Count</td>
-            <td>Minor Allele Frequency 
-                <a href="SortTable?column=MAF">
-                    <span class="glyphicon glyphicon-triangle-top"></span>
-                </a>
+            <td>
+                <a href="SortTable?column=MAF">Minor Allele Frequency</a>
             </td>
             <td>CADD Score</td>
         </tr> 

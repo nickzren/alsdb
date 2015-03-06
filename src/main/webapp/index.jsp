@@ -50,6 +50,4 @@
 
         </div>   
     </body>
-
-    <%@include file="base/js.jsp" %>  
 </html>
