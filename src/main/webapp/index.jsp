@@ -13,7 +13,8 @@
             <div class="container-main">
                 <div class="jumbotron" style="padding:20px 40px 20px 50px">
                     <h1>ALSdb</h1>
-                    <p>The ALS Data Browser is a catalogue of genetic variants identified from 1,424 patients 
+                    <p>The ALS Data Browser is a catalogue of genetic variants identified from 
+                        <a href="download.jsp">1,424 patients</a> 
                         recruited and sequenced for their diagnosis of Amyotrophic Lateral Sclerosis. 
                         Approximately 93.5% of these cases are sporadic 
                         (<a href="http://als.umassmed.edu/" target="_blank">click here</a> 
@@ -29,8 +30,8 @@
 
                 <div class="row">
                     <div class="col-xs-6 col-md-4">
-                        <h4>Sequencing Centers</h4>
-                        <ul style="float: center">
+                        <h4>Sequencing centers</h4>
+                        <ul>
                             <li><a href="http://www.igenmed.org/" target="_blank">IGM</a></li>
                             <li><a href="http://hudsonalpha.org/" target="_blank">HudsonAlpha</a></li>
                             <li><a href="http://www.laboguyrouleau.ca/" target="_blank">McGill University</a></li>
@@ -44,7 +45,7 @@
                         </ul>   
                     </div>
                     <div class="col-xs-6 col-md-4">
-                        <h4>Website Team</h4>
+                        <h4>Website team</h4>
                         <ul>
                             <li>Nick Ren</li>
                             <li>Joshua Bridgers</li>
