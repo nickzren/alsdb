@@ -40,61 +40,79 @@
 } else {
 %>
 
-<table class="table table-condensed table-hover text-center">
+<table id="variant" class="table table-hover tablesorter">
     <thead>
-        <tr style="font-weight:bold;">
-            <td>Gene</td>
-            <td>Transcript</td>
-            <td>Codon Change</td>
-            <td>AA Change</td>
-            <td>CCDS</td>
-            <td>Consequence</td>
-            <td>Polyphen Humvar</td>
-            <td>Sift</td>
+        <tr>
+            <th class="text-center">Gene</th>
+            <th class="text-center">Transcript</th>
+            <th class="text-center">Codon Change</th>
+            <th class="text-center">AA Change</th>
+            <th class="text-center">CCDS</th>
+            <th class="text-center cursor-pointer">Consequence <span class="glyphicon glyphicon-sort"></span></th>
+            <th class="text-center">Polyphen Humvar</th>
+            <th class="text-center">Sift</th>
         </tr> 
     </thead>
 
-    <%
-        for (ArrayList<Annotation> list : variant.getGeneAnnotationMap().values()) {
-            for (Annotation annotation : list) {
-    %>
+    <tbody>
+        <%
+            for (ArrayList<Annotation> list : variant.getGeneAnnotationMap().values()) {
+                for (Annotation annotation : list) {
+        %>
 
-    <tr>
-        <td>
-            <a href="SearchQuery?query=<%=annotation.getGeneName()%>">
-                <%=annotation.getGeneName()%>
-            </a>
-        </td>
-        <td>
-            <%=annotation.getTranscript()%>
-        </td>
-        <td>
-            <%=annotation.getCodonChange()%>
-        </td>
-        <td>
-            <%=annotation.getAaChange()%>
-        </td>
-        <td>
-            <%=annotation.getCcds()%>
-        </td>
-        <td>
-            <%=annotation.getConsequence()%>
-        </td>
-        <td>
-            <%=annotation.getPolyphenHumvar()%>
-        </td>
-        <td>
-            <%=annotation.getSift()%>
-        </td>
-    </tr>
+        <tr class="text-center">
+            <td>
+                <a href="SearchQuery?query=<%=annotation.getGeneName()%>">
+                    <%=annotation.getGeneName()%>
+                </a>
+            </td>
+            <td>
+                <%=annotation.getTranscript()%>
+            </td>
+            <td data-rank="<%=annotation.getIgmRank()%>">
+                <%=annotation.getCodonChange()%>
+            </td>
+            <td>
+                <%=annotation.getAaChange()%>
+            </td>
+            <td>
+                <%=annotation.getCcds()%>
+            </td>
+            <td>
+                <%=annotation.getConsequence()%>
+            </td>
+            <td>
+                <%=annotation.getPolyphenHumvar()%>
+            </td>
+            <td>
+                <%=annotation.getSift()%>
+            </td>
+        </tr>
 
-    <%
+        <%
+                }
             }
-        }
-    %>
-
+        %>
+    </tbody>
 </table>
 
+<script type="text/javascript">
+    $(function () {
+        $('#variant').tablesorter({
+            // pass the headers argument and assing a object 
+            headers: {
+                0: {sorter: false},
+                1: {sorter: false},
+                2: {sorter: false},
+                3: {sorter: false},
+                4: {sorter: false},
+                6: {sorter: false},
+                7: {sorter: false}
+            }
+        });
+    });
+</script>      
+        
 <%
     }
 %>

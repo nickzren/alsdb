@@ -37,7 +37,7 @@
                 </p>
 
                 <br/>
-                               
+
                 <%@include file="browser/result.jsp" %>  
             </div>
         </div>

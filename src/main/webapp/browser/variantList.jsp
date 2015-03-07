@@ -57,60 +57,71 @@
 } else {
 %>   
 
-<table class="table table-condensed table-hover text-center">
-    <thead>
-        <tr style="font-weight:bold;">
-            <td>
-                <a href="SortTable?column=Variant">Variant</a>
-            </td>
-            <td>Transcript</td>
-            <td>AA Change</td>
-            <td>
-                <a href="SortTable?column=Consequence">Consequence</a>
-            </td>
-            <td>Allele Count</td>
-            <td>
-                <a href="SortTable?column=MAF">Minor Allele Frequency</a>
-            </td>
-            <td>CADD Score</td>
+<table id="variantList" class="table table-hover tablesorter">
+    <thead> 
+        <tr> 
+            <th class="text-center cursor-pointer">Variant <span class="glyphicon glyphicon-sort"></span></th> 
+            <th class="text-center">Transcript</th> 
+            <th class="text-center">AA Change</th> 
+            <th class="text-center sorter-rank cursor-pointer">Consequence <span class="glyphicon glyphicon-sort"></span></th> 
+            <th class="text-center">Allele Count</th>
+            <th class="text-center cursor-pointer">Minor Allele Frequency <span class="glyphicon glyphicon-sort"></span></th>
+            <th class="text-center">CADD Score</th>
         </tr> 
-    </thead>
+    </thead> 
 
-    <%
-        for (Variant variant : variantList) {
-    %>
+    <tbody>
+        <%
+            for (Variant variant : variantList) {
+        %>
 
-    <tr>
-        <td>
-            <a href="SearchQuery?query=<%=variant.getIdStr()%>">
-                <%=variant.getIdStr()%>
-            </a>
-        </td>
-        <td>
-            <%=variant.getAnnotation().getTranscript()%>
-        </td>
-        <td>
-            <%=variant.getAnnotation().getAaChange()%>
-        </td>
-        <td>
-            <%=variant.getAnnotation().getConsequence()%>
-        </td>
-        <td>
-            <%=variant.getAlleleCount()%>
-        </td>
-        <td>
-            <%=variant.getMaf()%>
-        </td>
-        <td>
-            <%=variant.getCscore()%>
-        </td>
-    </tr>
+        <tr class="text-center">
+            <td>
+                <a href="SearchQuery?query=<%=variant.getIdStr()%>">
+                    <%=variant.getIdStr()%>
+                </a>
+            </td>
+            <td>
+                <%=variant.getAnnotation().getTranscript()%>
+            </td>
+            <td>
+                <%=variant.getAnnotation().getAaChange()%>
+            </td>
+            <td data-rank="<%=variant.getAnnotation().getIgmRank()%>">
+                <%=variant.getAnnotation().getConsequence()%>
+            </td>
+            <td>
+                <%=variant.getAlleleCount()%>
+            </td>
+            <td>
+                <%=variant.getMaf()%>
+            </td>
+            <td>
+                <%=variant.getCscore()%>
+            </td>
+        </tr>
 
-    <%
-        }
-    %>
+        <%
+            }
+        %>
+
+    </tbody>
 
 </table>
+
+<script type="text/javascript">
+    $(function () {
+        $('#variantList').tablesorter({
+            // pass the headers argument and assing a object 
+            headers: {
+                1: {sorter: false},
+                2: {sorter: false},
+                4: {sorter: false},
+                6: {sorter: false}
+            }
+        });
+    });
+</script>
 
 <%
     }
