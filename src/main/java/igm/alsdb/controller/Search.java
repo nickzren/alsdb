@@ -1,9 +1,9 @@
 package igm.alsdb.controller;
 
 import igm.alsdb.model.Download;
+import igm.alsdb.util.DBManager;
 import igm.alsdb.model.Input;
 import igm.alsdb.model.Output;
-import igm.alsdb.model.Sort;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -12,16 +12,25 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author nick
+ * @author Nick
  */
-public class SortTable extends HttpServlet {
+public class Search extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            if (Sort.column == null
-                    || !Sort.column.equalsIgnoreCase(request.getParameter("column"))) {
-                Sort.init(request);
+            if (Input.query == null
+                    || !Input.query.equalsIgnoreCase(request.getParameter("query"))) {
+
+                if (Download.rootPath == null) {
+                    Download.rootPath = getServletContext().getRealPath("/download/");
+                }
+
+                DBManager.init();
+
+                Input.init(request);
+
+                Output.init();
             }
 
             setRequest(request);
@@ -39,7 +48,6 @@ public class SortTable extends HttpServlet {
         request.setAttribute("variantList", Output.variantList);
         request.setAttribute("errorMsg", Output.errorMsg);
         request.setAttribute("url", Download.url);
-        request.setAttribute("column", Sort.column);
     }
 
     @Override
@@ -56,7 +64,6 @@ public class SortTable extends HttpServlet {
 
     @Override
     public String getServletInfo() {
-        return "alsdb sort table";
+        return "alsdb search query";
     }
-
 }

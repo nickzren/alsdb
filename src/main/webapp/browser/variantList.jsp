@@ -77,7 +77,7 @@
 
         <tr class="text-center">
             <td>
-                <a href="SearchQuery?query=<%=variant.getIdStr()%>">
+                <a href="Search?query=<%=variant.getIdStr()%>">
                     <%=variant.getIdStr()%>
                 </a>
             </td>

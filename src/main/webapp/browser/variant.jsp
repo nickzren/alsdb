@@ -62,7 +62,7 @@
 
         <tr class="text-center">
             <td>
-                <a href="SearchQuery?query=<%=annotation.getGeneName()%>">
+                <a href="Search?query=<%=annotation.getGeneName()%>">
                     <%=annotation.getGeneName()%>
                 </a>
             </td>

@@ -15,7 +15,7 @@
 
                 <div class="row">
                     <div class="col-md-7">
-                        <form class="form-search" action="SearchQuery">
+                        <form class="form-search" action="Search">
                             <div class="input-group">
                                 <input name="query" class="form-control input-lg tt-input"
                                        type="text" placeholder="Search for a gene or region or variant" >
@@ -31,9 +31,9 @@
 
                 <p class="text-muted" style="margin-left: 10px">
                     Examples - 
-                    Gene: <a href="SearchQuery?query=TBK1">TBK1</a>,
-                    Region: <a href="SearchQuery?query=21:33032075-33040899">21:33032075-33040899</a>, 
-                    Variant: <a href="SearchQuery?query=14-21162090-G-A">14-21162090-G-A</a>
+                    Gene: <a href="Search?query=TBK1">TBK1</a>,
+                    Region: <a href="Search?query=21:33032075-33040899">21:33032075-33040899</a>, 
+                    Variant: <a href="Search?query=14-21162090-G-A">14-21162090-G-A</a>
                 </p>
 
                 <br/>
