@@ -48,7 +48,8 @@
             <th class="text-center">Codon Change</th>
             <th class="text-center">AA Change</th>
             <th class="text-center">CCDS</th>
-            <th class="text-center cursor-pointer">Consequence <span class="glyphicon glyphicon-sort"></span></th>
+            <th class="text-center" style="cursor: pointer;">Consequence 
+                <span class="glyphicon glyphicon-sort"></span></th>
             <th class="text-center">Polyphen Humvar</th>
             <th class="text-center">Sift</th>
         </tr> 
