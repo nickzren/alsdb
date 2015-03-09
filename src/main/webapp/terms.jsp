@@ -40,7 +40,7 @@
                     Andrew S. Allen, Richard S. Bedlack, J. Wade Harper, Aaron D. Gitler, Guy A. Rouleau, Robert Brown, 
                     Matthew B. Harms, Gregory M. Cooper, Tim Harris, Richard M. Myers, David B. Goldstein. (in press 2015) 
                     Exome sequencing in amyotrophic lateral sclerosis identifies risk genes and pathways. 
-                    <em>Science <a href="http://www.sciencemag.org/content/early/2015/02/18/science.aaa3650.full" 
+                    <em>Science <a href="http://www.sciencemag.org/lookup/doi/10.1126/science.aaa3650" 
                                    target="_blank">DOI: 10.1126/science.aaa3650</a></em>.
                 </p>
 
