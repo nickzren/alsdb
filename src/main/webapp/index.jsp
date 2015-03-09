@@ -14,7 +14,7 @@
                 <div class="jumbotron" style="padding:20px 40px 20px 50px">
                     <h1>ALSdb</h1>
                     <p>The ALS Data Browser is a catalogue of genetic variants identified from 
-                        <a href="download.jsp">1,424 patients</a> 
+                        <a href="download.jsp">1,424 Caucasian patients</a> 
                         recruited and sequenced for their diagnosis of Amyotrophic Lateral Sclerosis. 
                         Approximately 93.5% of these cases are sporadic 
                         (<a href="http://als.umassmed.edu/" target="_blank">click here</a> 

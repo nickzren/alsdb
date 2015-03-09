@@ -9,7 +9,11 @@
             <%@include file="base/header.jsp" %>
 
             <div class="container-main">
-                <h3>Data Browser <span class="label label-info">v1</span></h3>
+                <h3>Data Browser 
+                    <a href="download.jsp" style="text-decoration: none;">
+                        <span class="label label-info">v1</span>
+                    </a>
+                </h3>
 
                 <br/>
 
