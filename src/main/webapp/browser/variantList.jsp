@@ -61,14 +61,14 @@
     <thead> 
         <tr> 
             <th class="text-center" style="cursor: pointer;">
-                Variant <span class="glyphicon glyphicon-sort"></span></th> 
+                Variant <a><span class="glyphicon glyphicon-sort"></span></a></th> 
             <th class="text-center">Transcript</th> 
             <th class="text-center">AA Change</th> 
             <th class="text-center sorter-rank" style="cursor: pointer;">
-                Consequence <span class="glyphicon glyphicon-sort"></span></th> 
+                Consequence <a><span class="glyphicon glyphicon-sort"></span></a></th> 
             <th class="text-center">Allele Count</th>
             <th class="text-center" style="cursor: pointer;">
-                Minor Allele Frequency <span class="glyphicon glyphicon-sort"></span></th>
+                Minor Allele Frequency <a><span class="glyphicon glyphicon-sort"></span></a></th>
             <th class="text-center">CADD Score</th>
         </tr> 
     </thead> 
