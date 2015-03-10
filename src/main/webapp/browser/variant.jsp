@@ -69,7 +69,7 @@
             <td>
                 <%=annotation.getTranscript()%>
             </td>
-            <td data-rank="<%=annotation.getIgmRank()%>">
+            <td>
                 <%=annotation.getCodonChange()%>
             </td>
             <td>
@@ -78,7 +78,7 @@
             <td>
                 <%=annotation.getCcds()%>
             </td>
-            <td>
+            <td data-rank="<%=annotation.getIgmRank()%>">
                 <%=annotation.getConsequence()%>
             </td>
             <td>
