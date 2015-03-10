@@ -48,8 +48,7 @@
             <th class="text-center">Codon Change</th>
             <th class="text-center">AA Change</th>
             <th class="text-center">CCDS</th>
-            <th class="text-center" style="cursor: pointer;">Consequence 
-                <a><span class="glyphicon glyphicon-sort"></span></a></th>
+            <th class="text-center">Consequence</th>
             <th class="text-center">Polyphen Humvar</th>
             <th class="text-center">Sift</th>
         </tr> 
@@ -100,7 +99,9 @@
 <script type="text/javascript">
     $(function () {
         $('#variant').tablesorter({
-            // pass the headers argument and assing a object 
+            theme: "bootstrap",
+            headerTemplate: '{content} {icon}',
+            widgets: ["uitheme"],
             headers: {
                 0: {sorter: false},
                 1: {sorter: false},
@@ -113,7 +114,7 @@
         });
     });
 </script>      
-        
+
 <%
     }
 %>

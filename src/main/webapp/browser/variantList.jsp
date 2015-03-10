@@ -57,18 +57,15 @@
 } else {
 %>   
 
-<table id="variantList" class="table table-hover tablesorter">
+<table id="variantList" class="tablesorter">
     <thead> 
         <tr> 
-            <th class="text-center" style="cursor: pointer;">
-                Variant <a><span class="glyphicon glyphicon-sort"></span></a></th> 
+            <th class="text-center" style="cursor: pointer;">Variant</th> 
             <th class="text-center">Transcript</th> 
             <th class="text-center">AA Change</th> 
-            <th class="text-center sorter-rank" style="cursor: pointer;">
-                Consequence <a><span class="glyphicon glyphicon-sort"></span></a></th> 
+            <th class="text-center sorter-rank" style="cursor: pointer;">Consequence</th> 
             <th class="text-center">Allele Count</th>
-            <th class="text-center" style="cursor: pointer;">
-                Minor Allele Frequency <a><span class="glyphicon glyphicon-sort"></span></a></th>
+            <th class="text-center" style="cursor: pointer;">Minor Allele Frequency</th>
             <th class="text-center">CADD Score</th>
         </tr> 
     </thead> 
@@ -115,7 +112,9 @@
 <script type="text/javascript">
     $(function () {
         $('#variantList').tablesorter({
-            // pass the headers argument and assing a object 
+            theme: "bootstrap",
+            headerTemplate: '{content} {icon}',
+            widgets: ["uitheme"],
             headers: {
                 1: {sorter: false},
                 2: {sorter: false},
