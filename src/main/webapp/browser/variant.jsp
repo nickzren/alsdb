@@ -48,7 +48,7 @@
             <th class="text-center">Codon Change</th>
             <th class="text-center">AA Change</th>
             <th class="text-center">CCDS</th>
-            <th class="text-center">Consequence</th>
+            <th class="text-center" style="cursor: pointer">Consequence</th>
             <th class="text-center">Polyphen Humvar</th>
             <th class="text-center">Sift</th>
         </tr> 
