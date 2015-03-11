@@ -9,7 +9,7 @@
             <%@include file="base/header.jsp" %>
 
             <div class="container-main">
-                <h3>Download <span class="label label-info">v1</span></h3>
+                <h3>Download <span class="label label-primary">v1</span></h3>
 
                 <br/>
 
