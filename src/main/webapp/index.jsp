@@ -16,9 +16,7 @@
                     <p>The ALS Data Browser is a catalogue of genetic variants identified from 
                         <a href="download.jsp">1,424 Caucasian patients</a> 
                         recruited and sequenced for their diagnosis of Amyotrophic Lateral Sclerosis. 
-                        Approximately 93.5% of these cases are sporadic 
-                        (<a href="http://als.umassmed.edu/" target="_blank">click here</a> 
-                        for a database from familial cases). 
+                        Approximately 93.5% of these cases are sporadic. 
                         The database includes single nucleotide substitution variants 
                         (SNVs) and insertion and deletion (indels) variants. 
                         Funding for this study was provided by Biogen Idec.</p>
@@ -41,7 +39,10 @@
                     <div class="col-xs-6 col-md-4">
                         <h4>Affiliate sites</h4>
                         <ul>
-                            <li><a href="http://als.umassmed.edu/" target="_blank">FALS variant data server</a></li>
+                            <li><a href="http://als.umassmed.edu/" target="_blank">
+                                    ALS Variant Server (AVS)
+                                </a>
+                            </li>
                         </ul>   
                     </div>
                     <div class="col-xs-6 col-md-4">
@@ -50,7 +51,7 @@
                             <li>Joshua Bridgers</li>
                             <li>
                                 <a href="https://www.linkedin.com/in/nickren" target="_blank" 
-                                   style=" color: black;text-decoration: none;">
+                                   style="color: black;text-decoration: none;">
                                     Nick Ren
                                 </a>
                             </li>                            
