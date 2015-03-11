@@ -47,10 +47,15 @@
                     <div class="col-xs-6 col-md-4">
                         <h4>Website team</h4>
                         <ul>
-                            <li>Nick Ren</li>
                             <li>Joshua Bridgers</li>
-                            <li>Slavé Petrovski</li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/nickren" target="_blank" 
+                                   style=" color: black;text-decoration: none;">
+                                    Nick Ren
+                                </a>
+                            </li>                            
                             <li>Quanli Wang</li>
+                            <li>Slavé Petrovski</li>
                         </ul>   
                     </div>
                 </div>
