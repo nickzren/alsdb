@@ -6,12 +6,12 @@
     Variant variant = (Variant) request.getAttribute("variant");
 %>
 
-<div>
-    <span class="label label-info">Note:</span> 
+<p class="lead">
+    <span class="label label-info">Note</span> 
     <small>This screen lists all Ensembl-based 
         annotations for the selected variant. This includes annotations with 
         overlapping genes.</small>
-</div>
+</p>
 
 <div class="row">    
     <div class="col-md-10">

@@ -1,7 +1,7 @@
 <script type="text/javascript">
     $(function () {
         $.tablesorter.themes.bootstrap = {
-            table: 'table table-hover table-condensed tablesorter',
+            table: 'table table-hover tablesorter',
             iconSortNone: 'glyphicon glyphicon-sort', // class name added to icon when column is not sorted
             iconSortAsc: 'icon-chevron-up glyphicon glyphicon-sort-by-attributes', // class name added to icon when column has ascending sort
             iconSortDesc: 'icon-chevron-down glyphicon glyphicon-sort-by-attributes-alt', // class name added to icon when column has descending sort

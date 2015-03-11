@@ -33,6 +33,10 @@ code {
     text-align: center;
 }
 
+.tooltip{
+    font-size:11px;
+}
+
 .tooltip.in{
     opacity:.8;
 }
