@@ -19,14 +19,16 @@
 <div class="row">
     <div class="col-md-10">
         <h4><%=label%> 
-            <%if (!variantList.isEmpty()) {%>
-            <span class="label label-default" >
+            <%if (!variantList.isEmpty()) {%>            
+            <span class="label label-default" data-toggle="tooltip" 
+                   title="Total tally of variants linked to this gene/region">
                 Variant Count: <%=variantList.size()%>
             </span>
             <%if (!query.contains(":")) // gene
                 {%>
             &nbsp;
-            <span class="label label-default">
+            <span class="label label-default" data-toggle="tooltip" 
+                   title="Genic intolerance percentile score for gene">
                 RVIS Percentile: <%=variantList.get(0).getAll01MafRvisPercentile()%>
             </span>
             <%}
@@ -37,7 +39,9 @@
     <%if (!variantList.isEmpty()) {%>
     <div class="col-md-2" >
         <a style="float: right" href="<%=url%>" >
-            <button type="button" class="btn btn-primary">Download</button>
+            <button type="button" class="btn btn-primary" data-toggle="tooltip" 
+                   title="Download variant information with additional fields">
+                Download</button>
         </a>
     </div>
     <%}%>
@@ -60,14 +64,56 @@
 <table id="variantList" class="tablesorter">
     <thead> 
         <tr> 
-            <th class="text-center" style="cursor: pointer;">Variant</th> 
-            <th class="text-center">Transcript</th> 
-            <th class="text-center">AA Change</th> 
-            <th class="text-center sorter-rank" style="cursor: pointer;">Consequence</th> 
-            <th class="text-center">Allele Count</th>
-            <th class="text-center">Sample Count</th>
-            <th class="text-center" style="cursor: pointer;">Minor Allele Frequency</th>
-            <th class="text-center">CADD Score</th>
+            <th class="text-center" style="cursor: pointer;">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Chromsome - Position - Reference - Variant">
+                    Variant
+                </a>
+            </th> 
+            <th class="text-center">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Ensembl Transcript ID">
+                    Transcript
+                </a>
+            </th> 
+            <th class="text-center">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Amino-acid change">
+                    AA Change
+                </a>
+            </th> 
+            <th class="text-center sorter-rank" style="cursor: pointer;">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Predicted variant effect">
+                    Consequence
+                </a>
+            </th> 
+            <th class="text-center">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Number of observed alleles in the case population">
+                    Allele Count
+                </a>
+            </th>
+            <th class="text-center">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Number of samples with at least 10-fold coverage at 
+                   site and that passed quality control">
+                    Sample Count
+                </a>
+            </th>
+            <th class="text-center" style="cursor: pointer;">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Minor Allele Frequency of variant">
+                    MAF
+                </a>
+            </th>
+            <th class="text-center">
+                <a href="http://www.nature.com/ng/journal/v46/n3/abs/ng.2892.html"
+                   style="color: black;text-decoration: none;" target="_blank" 
+                   data-toggle="tooltip" title="The Combined Annotation Dependent Depletion (CADD) score">
+                    CADD Score
+                </a>
+            </th>
         </tr> 
     </thead> 
 
@@ -127,6 +173,8 @@
                 7: {sorter: false}
             }
         });
+
+        $('[data-toggle="tooltip"]').tooltip();
     });
 </script>
 

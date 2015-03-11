@@ -6,19 +6,35 @@
     Variant variant = (Variant) request.getAttribute("variant");
 %>
 
-<div class="row">
+<div>
+    <span class="label label-info">Note:</span> 
+    <small>This screen lists all Ensembl-based 
+        annotations for the selected variant. This includes annotations with 
+        overlapping genes.</small>
+</div>
+
+<div class="row">    
     <div class="col-md-10">
         <h4>Variant: <%=request.getAttribute("query")%>
             <%if (variant != null) {%>
-            <span class="label label-default">
+            <span class="label label-default" data-toggle="tooltip" 
+                  title="Number of observed alleles in the case population">
                 Allele Count: <%=variant.getAlleleCount()%>
             </span>
             &nbsp;
-            <span class="label label-default">
-                Minor Allele Frequency: <%=variant.getMaf()%>
+            <span class="label label-default" data-toggle="tooltip" 
+                  title="Number of samples with at least 10-fold coverage at 
+                  site and that passed quality control">
+                Sample Count: <%=variant.getSampleCount()%>
+            </span>
+            &nbsp;
+            <span class="label label-default" data-toggle="tooltip" 
+                  title="Minor Allele Frequency of variant">
+                MAF: <%=variant.getMaf()%>
             </span> 
             &nbsp;
-            <span class="label label-default">
+            <span class="label label-default" data-toggle="tooltip" 
+                  title="The Combined Annotation Dependent Depletion (CADD) score">
                 CADD Score: <%=variant.getCscore()%>
             </span>
             <%}%>
@@ -40,17 +56,56 @@
 } else {
 %>
 
-<table id="variant" class="table table-hover tablesorter">
+<table id="variant" class="tablesorter">
     <thead>
         <tr>
-            <th class="text-center">Gene</th>
-            <th class="text-center">Transcript</th>
-            <th class="text-center">Codon Change</th>
-            <th class="text-center">AA Change</th>
-            <th class="text-center">CCDS</th>
-            <th class="text-center" style="cursor: pointer">Consequence</th>
-            <th class="text-center">Polyphen Humvar</th>
-            <th class="text-center">Sift</th>
+            <th class="text-center">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="HGNC Gene name">
+                    Gene
+                </a>
+            </th>
+            <th class="text-center">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Ensembl Transcript ID">
+                    Transcript
+                </a>
+            </th>
+            <th class="text-center">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Corresponding codon change">
+                    Codon Change
+                </a>
+            </th>
+            <th class="text-center">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Amino-acid change">
+                    AA Change
+                </a>
+            </th>
+            <th class="text-center">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Consensus Coding Sequence (CCDS) ID">
+                    CCDS
+                </a>
+            </th>
+            <th class="text-center" style="cursor: pointer">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="Predicted variant effect">
+                    Consequence
+                </a>
+            </th>
+            <th class="text-center">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title=" The predicted PolyPhen-2 HumVar score through Ve!P">
+                    PolyPhen-2 HumVar
+                </a>
+            </th>
+            <th class="text-center">
+                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                   title="The predicted SIFT score through Ve!P">SIFT
+                </a>
+            </th>
         </tr> 
     </thead>
 
@@ -112,6 +167,8 @@
                 7: {sorter: false}
             }
         });
+
+        $('[data-toggle="tooltip"]').tooltip();
     });
 </script>      
 
