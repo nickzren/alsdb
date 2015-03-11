@@ -65,6 +65,7 @@
             <th class="text-center">AA Change</th> 
             <th class="text-center sorter-rank" style="cursor: pointer;">Consequence</th> 
             <th class="text-center">Allele Count</th>
+            <th class="text-center">Sample Count</th>
             <th class="text-center" style="cursor: pointer;">Minor Allele Frequency</th>
             <th class="text-center">CADD Score</th>
         </tr> 
@@ -94,6 +95,9 @@
                 <%=variant.getAlleleCount()%>
             </td>
             <td>
+                <%=variant.getSampleCount()%>
+            </td>
+            <td>
                 <%=variant.getMaf()%>
             </td>
             <td>
@@ -119,7 +123,8 @@
                 1: {sorter: false},
                 2: {sorter: false},
                 4: {sorter: false},
-                6: {sorter: false}
+                5: {sorter: false},
+                7: {sorter: false}
             }
         });
     });
