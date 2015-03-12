@@ -23,11 +23,13 @@
                     <p><a class="btn btn-primary btn-lg" href="browser.jsp">
                             Browse data now!</a></p>
                 </div>
+                
+                <br/>
 
                 <div class="row">
                     <div class="col-xs-6 col-md-4">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><h4>Sequencing centers</h4></div>
+                            <div class="panel-heading"><strong>Sequencing centers</strong></div>
                             <div class="panel-body">
                                 <ul>
                                     <li><a href="http://www.igenmed.org/" target="_blank">IGM</a></li>
@@ -40,10 +42,11 @@
                     </div>
                     <div class="col-xs-6 col-md-4">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><h4>Affiliate sites</h4></div>
+                            <div class="panel-heading"><strong>Affiliate sites</strong></div>
                             <div class="panel-body">
                                 <ul>
-                                    <li><a href="http://als.umassmed.edu/" target="_blank">
+                                    <li>
+                                        <a href="http://als.umassmed.edu/" target="_blank">
                                             ALS Variant Server (AVS)
                                         </a>
                                     </li>
@@ -53,7 +56,7 @@
                     </div>
                     <div class="col-xs-6 col-md-4">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><h4>Website team</h4></div>
+                            <div class="panel-heading"><strong>Website team</strong></div>
                             <div class="panel-body">
                                 <ul>
                                     <li>Joshua Bridgers</li>

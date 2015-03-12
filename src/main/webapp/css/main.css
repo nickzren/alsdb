@@ -3,8 +3,20 @@ body {
 }
 
 .container-main {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.brand-img {
+    padding: 4.5px;
+}
+
+.brand-link {
+    font-weight: bold; 
+    font-size: 18px; 
+    color: black;
+    text-decoration: none;
+    cursor: pointer
 }
 
 .row {
