@@ -24,40 +24,50 @@
                             Browse data now!</a></p>
                 </div>
 
-                <br/>
-
                 <div class="row">
                     <div class="col-xs-6 col-md-4">
-                        <h4>Sequencing centers</h4>
-                        <ul>
-                            <li><a href="http://www.igenmed.org/" target="_blank">IGM</a></li>
-                            <li><a href="http://hudsonalpha.org/" target="_blank">HudsonAlpha</a></li>
-                            <li><a href="http://www.laboguyrouleau.ca/" target="_blank">McGill University</a></li>
-                            <li><a href="http://gitlerlab.googlepages.com/" target="_blank">Stanford University</a></li>
-                        </ul>
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h4>Sequencing centers</h4></div>
+                            <div class="panel-body">
+                                <ul>
+                                    <li><a href="http://www.igenmed.org/" target="_blank">IGM</a></li>
+                                    <li><a href="http://hudsonalpha.org/" target="_blank">HudsonAlpha</a></li>
+                                    <li><a href="http://www.laboguyrouleau.ca/" target="_blank">McGill University</a></li>
+                                    <li><a href="http://gitlerlab.googlepages.com/" target="_blank">Stanford University</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-xs-6 col-md-4">
-                        <h4>Affiliate sites</h4>
-                        <ul>
-                            <li><a href="http://als.umassmed.edu/" target="_blank">
-                                    ALS Variant Server (AVS)
-                                </a>
-                            </li>
-                        </ul>   
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h4>Affiliate sites</h4></div>
+                            <div class="panel-body">
+                                <ul>
+                                    <li><a href="http://als.umassmed.edu/" target="_blank">
+                                            ALS Variant Server (AVS)
+                                        </a>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>  
                     </div>
                     <div class="col-xs-6 col-md-4">
-                        <h4>Website team</h4>
-                        <ul>
-                            <li>Joshua Bridgers</li>
-                            <li>
-                                <a href="https://github.com/nickzren" target="_blank" 
-                                   style="color: black;text-decoration: none;">
-                                    Nick Ren
-                                </a>
-                            </li>                            
-                            <li>Quanli Wang</li>
-                            <li>Slavé Petrovski</li>
-                        </ul>   
+                        <div class="panel panel-default">
+                            <div class="panel-heading"><h4>Website team</h4></div>
+                            <div class="panel-body">
+                                <ul>
+                                    <li>Joshua Bridgers</li>
+                                    <li>
+                                        <a href="https://github.com/nickzren" target="_blank" 
+                                           style="color: black;text-decoration: none;">
+                                            Nick Ren
+                                        </a>
+                                    </li>                            
+                                    <li>Quanli Wang</li>
+                                    <li>Slavé Petrovski</li>
+                                </ul> 
+                            </div>
+                        </div>  
                     </div>
                 </div>
             </div>
@@ -82,8 +92,8 @@
                 <a title="web analytics"
                    href="http://statcounter.com/" target="_blank">
                     <img class="statcounter"
-                        src="http://c.statcounter.com/10337520/0/05008421/1/"
-                        alt="web analytics">
+                         src="http://c.statcounter.com/10337520/0/05008421/1/"
+                         alt="web analytics">
                 </a>
             </div>
         </noscript>
