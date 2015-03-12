@@ -50,7 +50,7 @@
                         <ul>
                             <li>Joshua Bridgers</li>
                             <li>
-                                <a href="https://www.linkedin.com/in/nickren" target="_blank" 
+                                <a href="https://github.com/nickzren" target="_blank" 
                                    style="color: black;text-decoration: none;">
                                     Nick Ren
                                 </a>
