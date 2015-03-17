@@ -65,51 +65,51 @@
     <thead> 
         <tr> 
             <th class="text-center" style="cursor: pointer;">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Chromsome - Position - Reference - Variant">
                     Variant
                 </a>
             </th> 
             <th class="text-center">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Ensembl Transcript ID">
                     Transcript
                 </a>
             </th> 
             <th class="text-center">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Amino-acid change">
                     AA Change
                 </a>
             </th> 
             <th class="text-center sorter-rank" style="cursor: pointer;">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Predicted variant effect">
                     Consequence
                 </a>
             </th> 
             <th class="text-center">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Number of observed alleles in the case population">
                     Allele Count
                 </a>
             </th>
             <th class="text-center">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Number of samples with at least 10-fold coverage at 
                    site and that passed quality control">
                     Sample Count
                 </a>
             </th>
             <th class="text-center" style="cursor: pointer;">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Minor Allele Frequency of variant">
                     MAF
                 </a>
             </th>
             <th class="text-center">
                 <a href="http://www.nature.com/ng/journal/v46/n3/abs/ng.2892.html"
-                   style="color: black;text-decoration: none;" target="_blank" 
+                   class="black" target="_blank" 
                    data-toggle="tooltip" title="The Combined Annotation Dependent Depletion (CADD) score">
                     CADD Score
                 </a>

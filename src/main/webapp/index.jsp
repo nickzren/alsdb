@@ -23,7 +23,7 @@
                     <p><a class="btn btn-primary btn-lg" href="browser.jsp">
                             Browse data now!</a></p>
                 </div>
-                
+
                 <br/>
 
                 <div class="row">
@@ -61,8 +61,7 @@
                                 <ul>
                                     <li>Joshua Bridgers</li>
                                     <li>
-                                        <a href="https://github.com/nickzren" target="_blank" 
-                                           style="color: black;text-decoration: none;">
+                                        <a class="black" href="https://github.com/nickzren" target="_blank">
                                             Nick Ren
                                         </a>
                                     </li>                            

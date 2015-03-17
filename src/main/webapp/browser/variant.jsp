@@ -60,49 +60,49 @@
     <thead>
         <tr>
             <th class="text-center">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="HGNC Gene name">
                     Gene
                 </a>
             </th>
             <th class="text-center">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Ensembl Transcript ID">
                     Transcript
                 </a>
             </th>
             <th class="text-center">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Corresponding codon change">
                     Codon Change
                 </a>
             </th>
             <th class="text-center">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Amino-acid change">
                     AA Change
                 </a>
             </th>
             <th class="text-center">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Consensus Coding Sequence (CCDS) ID">
                     CCDS
                 </a>
             </th>
             <th class="text-center" style="cursor: pointer">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="Predicted variant effect">
                     Consequence
                 </a>
             </th>
             <th class="text-center">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title=" The predicted PolyPhen-2 HumVar score through Ve!P">
                     PolyPhen-2 HumVar
                 </a>
             </th>
             <th class="text-center">
-                <a style="color: black;text-decoration: none;" data-toggle="tooltip" 
+                <a class="black" data-toggle="tooltip" 
                    title="The predicted SIFT score through Ve!P">SIFT
                 </a>
             </th>
