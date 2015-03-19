@@ -10,7 +10,7 @@
 
             <div class="container-main">
                 <h3>Data Browser 
-                    <a href="download.jsp" style="text-decoration: none;">
+                    <a class="black" href="download.jsp">
                         <span class="label label-primary">v1</span>
                     </a>
                 </h3>
@@ -18,7 +18,7 @@
                 <br/>
 
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-6">
                         <form class="form-search" action="Search">
                             <div class="input-group">
                                 <input name="query" class="form-control input-lg tt-input"
@@ -33,7 +33,7 @@
                     </div>
                 </div>
 
-                <p class="text-muted" style="margin-left: 10px">
+                <p class="text-muted" style="margin-left: 5px">
                     Examples - 
                     Gene: <a href="Search?query=TBK1">TBK1</a>,
                     Region: <a href="Search?query=21:33032075-33040899">21:33032075-33040899</a>, 
