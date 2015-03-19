@@ -29,7 +29,9 @@
             &nbsp;
             <span class="label label-default" data-toggle="tooltip" 
                    title="Genic intolerance percentile score for gene">
-                RVIS Percentile: <%=variantList.get(0).getAll01MafRvisPercentile()%>
+                <a class="white" href="http://chgv.org/GenicIntolerance/" target="_blank">
+                    RVIS Percentile</a>: 
+                <%=variantList.get(0).getAll01MafRvisPercentile()%>
             </span>
             <%}
                 }%>
