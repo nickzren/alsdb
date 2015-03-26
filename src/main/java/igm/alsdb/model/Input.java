@@ -22,7 +22,7 @@ public class Input {
         idStr = "";
         table = "variantList";
 
-        query = request.getParameter("query");
+        query = request.getParameter("query").toUpperCase();
 
         if (query.split("-").length == 4) {
             idStr = query;
