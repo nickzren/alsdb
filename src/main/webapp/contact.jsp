@@ -9,9 +9,7 @@
             <%@include file="base/header.jsp" %>
 
             <div class="container-main">
-                <h3>Contact</h3>
-
-                <br/>
+                <h3 class="page-header">Contact</h3>
 
                 <p>For any information regarding the variant database or user 
                     interface please contact 

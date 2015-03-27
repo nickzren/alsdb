@@ -9,13 +9,11 @@
             <%@include file="base/header.jsp" %>
 
             <div class="container-main">
-                <h3>Data Browser 
+                <h3 class="page-header">Data Browser 
                     <a class="black" href="download.jsp">
                         <span class="label label-primary">v1</span>
                     </a>
                 </h3>
-
-                <br/>
 
                 <div class="row">
                     <div class="col-md-6">
