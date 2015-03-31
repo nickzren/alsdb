@@ -3,7 +3,22 @@
     "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-    <%@include file="base/head.jsp" %>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>ALS Data Browser (ALSdB) | ALS | Amyotrophic Lateral Sclerosis</title>
+
+        <meta name="description" content="The ALS Data Browser is a catalogue of genetic variants 
+              identified from 1,424 Caucasian patients recruited and sequenced for 
+              their diagnosis of Amyotrophic Lateral Sclerosis.">
+
+        <link rel="canonical" href="http://alsdb.org/">
+        <link rel="canonical" href="http://chgv.org/alsdb/">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
 
     <body>
         <div class="container">

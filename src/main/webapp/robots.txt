@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /base
+Disallow: /browser
+Disallow: /css
+Disallow: /download
+Disallow: /fonts
+Disallow: /img
+Disallow: /js
+Disallow: /contact.jsp
+Disallow: /error.jsp
+Disallow: /terms.jsp
+Disallow: /test.jsp
+Sitemap: http://alsdb.org/sitemap.xml
