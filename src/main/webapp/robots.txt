@@ -1,4 +1,6 @@
 User-agent: *
+Disallow: /META-INF
+Disallow: /WEB-INF
 Disallow: /base
 Disallow: /browser
 Disallow: /css
