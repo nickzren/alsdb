@@ -36,8 +36,13 @@
                         The database includes single nucleotide substitution variants 
                         (SNVs) and insertion and deletion (indels) variants. 
                         Funding for this study was provided by Biogen Idec.</p>
-                    <p><a class="btn btn-primary btn-lg" href="browser.jsp">
-                            Browse data now!</a></p>
+                    <p>
+                        <a class="btn btn-primary btn-lg" href="browser.jsp">
+                            <i class="fa fa-bar-chart">
+                                Browse data now!
+                            </i>
+                        </a>
+                    </p>
                 </div>
 
                 <br/>

@@ -18,34 +18,36 @@
 
 <div class="row">
     <div class="col-md-10">
-        <h4><%=label%> 
-            <%if (!variantList.isEmpty()) {%>            
+        <h4>
+            <mark><%=label%></mark>
+                <%if (!variantList.isEmpty()) {%>            
             <span class="label label-default" data-toggle="tooltip" 
-                   title="Total tally of variants linked to this gene/region">
+                  title="Total tally of variants linked to this gene/region">
                 Variant Count: <%=variantList.size()%>
             </span>
             <%if (!query.contains(":")) // gene
-                {%>
+                    {%>
             &nbsp;
             <span class="label label-default" data-toggle="tooltip" 
-                   title="Genic intolerance percentile score for gene">
+                  title="Genic intolerance percentile score for gene">
                 <a class="white" href="http://chgv.org/GenicIntolerance/" target="_blank">
                     RVIS Percentile</a>: 
-                <%=variantList.get(0).getAll01MafRvisPercentile()%>
+                    <%=variantList.get(0).getAll01MafRvisPercentile()%>
             </span>
             <%}
-                }%>
+                    }%>
         </h4>
     </div>
 
     <%if (!variantList.isEmpty()) {%>
     <div class="col-md-2" >
-        <a style="float: right" href="<%=url%>" >
-          <i class="fa fa-download">
-              <button type="button" class="btn btn-primary" data-toggle="tooltip" 
-                   title="Download variant information with additional fields">
-                Download</button>
-          </i> 
+        <a style="float: right" href="<%=url%>">
+            <button type="button" class="btn btn-primary" data-toggle="tooltip" 
+                    title="Download variant information with additional fields">
+                <i class="fa fa-download">
+                    Download
+                </i>
+            </button>
         </a>
     </div>
     <%}%>
