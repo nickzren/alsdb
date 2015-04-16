@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
 
@@ -34,13 +35,19 @@
 
                 <p>
                     <a href="http://chgv.org/download/snps_indels_v1.txt.gz">
-                        <strong>snps_indels_v1.txt.gz</strong></a> 
+                        <i class="fa fa-file">
+                            snps_indels_v1.txt.gz
+                        </i>
+                    </a> 
                     (variant annotation file in tab-delimited text format)
                 </p>
 
                 <p>
                     <a href="http://chgv.org/download/coverage.all_sites_v1.txt.gz">
-                        <strong>coverage.all_sites_v1.txt.gz</strong></a> 
+                        <i class="fa fa-file">
+                            coverage.all_sites_v1.txt.gz
+                        </i>
+                    </a> 
                     (sequencing coverage file for all carrier and non-carrier sites within our target regions)
                 </p>
 

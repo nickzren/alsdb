@@ -17,6 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
 
@@ -44,7 +45,11 @@
                 <div class="row">
                     <div class="col-xs-6 col-md-4">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><strong>Sequencing centers</strong></div>
+                            <div class="panel-heading">
+                                <i class="fa fa-university">
+                                    <strong>Sequencing centers</strong>
+                                </i>
+                            </div>
                             <div class="panel-body">
                                 <ul>
                                     <li><a href="http://www.igenmed.org/" target="_blank">IGM</a></li>
@@ -57,7 +62,11 @@
                     </div>
                     <div class="col-xs-6 col-md-4">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><strong>Affiliate sites</strong></div>
+                            <div class="panel-heading">
+                                <i class="fa fa-link">
+                                    <strong>Affiliate sites</strong>
+                                </i>
+                            </div>
                             <div class="panel-body">
                                 <ul>
                                     <li>
@@ -71,7 +80,11 @@
                     </div>
                     <div class="col-xs-6 col-md-4">
                         <div class="panel panel-default">
-                            <div class="panel-heading"><strong>Website team</strong></div>
+                            <div class="panel-heading">
+                                <i class="fa fa-users">
+                                    <strong>Website team</strong>
+                                </i>
+                            </div>
                             <div class="panel-body">
                                 <ul>
                                     <li>Joshua Bridgers</li>
