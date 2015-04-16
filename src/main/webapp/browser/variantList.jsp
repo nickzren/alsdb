@@ -42,7 +42,7 @@
     <%if (!variantList.isEmpty()) {%>
     <div class="col-md-2" >
         <a style="float: right" href="<%=url%>">
-            <button type="button" class="btn btn-primary" data-toggle="tooltip" 
+            <button type="button" class="btn btn-default" data-toggle="tooltip" 
                     title="Download variant information with additional fields">
                 <i class="fa fa-download">
                     Download
