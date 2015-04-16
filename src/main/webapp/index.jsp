@@ -92,12 +92,12 @@
                             </div>
                             <div class="panel-body">
                                 <ul>
-                                    <li>Joshua Bridgers</li>
                                     <li>
                                         <a class="black" href="https://github.com/nickzren" target="_blank">
                                             Nick Ren
                                         </a>
-                                    </li>                            
+                                    </li>  
+                                    <li>Joshua Bridgers</li>                          
                                     <li>Quanli Wang</li>
                                     <li>Slavé Petrovski</li>
                                 </ul> 
