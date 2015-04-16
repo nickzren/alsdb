@@ -93,13 +93,13 @@
                             <div class="panel-body">
                                 <ul>
                                     <li>Joshua Bridgers</li>
-                                    <li>Slavé Petrovski</li>
                                     <li>
                                         <a class="black" href="https://github.com/nickzren" target="_blank">
                                             Nick Ren
                                         </a>
                                     </li>                            
                                     <li>Quanli Wang</li>
+                                    <li>Slavé Petrovski</li>
                                 </ul> 
                             </div>
                         </div>  

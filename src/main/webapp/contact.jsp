@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
 
@@ -19,16 +20,33 @@
             <div class="container-main">
                 <h3 class="page-header">Contact</h3>
 
-                <p>For any information regarding the variant database or user 
-                    interface please contact 
-                    <a href="mailto: alsdb@columbia.edu" target="_blank">alsdb@columbia.edu</a>
-                <p>For any information about the IGM please 
-                    <a href="http://www.igenmed.org/?loc=contact" target="_blank"
-                       >click</a> to contact</p>
-<!--                <p>For any information about the Biogen ALS consortium please contact 
-                    <mark>Insert Name and hyperlink to relevant person</mark></p>
-                </p>-->
+                <!--                <p>For any information about the IGM please 
+                                    <a href="http://www.igenmed.org/?loc=contact" target="_blank"
+                                       >click</a> to contact</p>-->
 
+
+                <address>
+                    <strong>ALS Consortium</strong><br>
+                    Email: 
+                    <a href="mailto: alsdb@columbia.edu" target="_blank">
+                        <i class="fa fa-envelope-o">
+                            alsdb@columbia.edu
+                        </i>
+                    </a>
+                </address>
+
+                <address>
+                    <strong>Institute for Genomic Medicine</strong><br>
+                    Columbia University Medical Center<br>
+                    701 W 168th Street<br>
+                    Hammer Building<br>
+                    New York, NY 10032<br>
+                    Contact us:
+                    <a href="http://www.igenmed.org/?loc=contact" target="_blank">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+
+                </address>
             </div>
         </div>
 
