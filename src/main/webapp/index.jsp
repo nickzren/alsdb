@@ -10,11 +10,12 @@
         <meta name="description" content="The ALS Data Browser is a catalogue of genetic variants 
               identified from 1,424 Caucasian patients recruited and sequenced for 
               their diagnosis of Amyotrophic Lateral Sclerosis.">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="canonical" href="http://alsdb.org/">
         <link rel="canonical" href="http://chgv.org/alsdb/">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
