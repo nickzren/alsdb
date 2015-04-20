@@ -22,7 +22,7 @@
             <div class="container-main">
                 <h3 class="page-header">Terms</h3>
 
-                <h4><i class="fa fa-gavel"> Terms of use</i></h4>
+                <h4><i class="fa fa-gavel"></i> Terms of use</h4>
                 <p>
                     This web site is intended to provide results from exome sequencing data of mostly sporadic 
                     ALS samples. The contents of the ALSdb is intended strictly for educational and research purposes. 
@@ -32,7 +32,7 @@
 
                 <br/>
 
-                <h4><i class="fa fa-star"> Citation</i></h4>                
+                <h4><i class="fa fa-star"></i> Citation</h4>                
                 <p>ALSdb,  New York City, New York (URL: http://alsdb.org) [date (month, year) accessed].</p>
                 <p>                    
                     Elizabeth T. Cirulli, Brittany N. Lasseigne, Slavé Petrovski, Peter C. Sapp, Patrick A. Dion, 
@@ -55,7 +55,7 @@
 
                 <br/>
 
-                <h4><i class="fa fa-database"> Data Generation</i></h4>
+                <h4><i class="fa fa-database"></i> Data Generation</h4>
 
                 <p>Sequencing of DNA was performed by the Duke Center for Human Genome Variation 
                     (now the Institute for Genomic Medicine, Columbia University), 

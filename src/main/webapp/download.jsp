@@ -6,7 +6,7 @@
         <title>Download</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -37,18 +37,16 @@
 
                 <p>
                     <a href="http://chgv.org/download/snps_indels_v1.txt.gz">
-                        <i class="fa fa-file">
-                            snps_indels_v1.txt.gz
-                        </i>
+                        <i class="fa fa-file"></i>
+                        snps_indels_v1.txt.gz
                     </a> 
                     (variant annotation file in tab-delimited text format)
                 </p>
 
                 <p>
                     <a href="http://chgv.org/download/coverage.all_sites_v1.txt.gz">
-                        <i class="fa fa-file">
-                            coverage.all_sites_v1.txt.gz
-                        </i>
+                        <i class="fa fa-file"></i>
+                        coverage.all_sites_v1.txt.gz
                     </a> 
                     (sequencing coverage file for all carrier and non-carrier sites within our target regions)
                 </p>

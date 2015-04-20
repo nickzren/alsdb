@@ -52,9 +52,8 @@
                     <div class="col-xs-6 col-md-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <i class="fa fa-university">
-                                    <strong>Sequencing centers</strong>
-                                </i>
+                                <i class="fa fa-university"></i>
+                                <strong>Sequencing centers</strong>
                             </div>
                             <div class="panel-body">
                                 <ul>
@@ -69,9 +68,8 @@
                     <div class="col-xs-6 col-md-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <i class="fa fa-link">
-                                    <strong>Affiliate sites</strong>
-                                </i>
+                                <i class="fa fa-link"></i>
+                                <strong>Affiliate sites</strong>
                             </div>
                             <div class="panel-body">
                                 <ul>
@@ -87,9 +85,8 @@
                     <div class="col-xs-6 col-md-4">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <i class="fa fa-users">
-                                    <strong>Website team</strong>
-                                </i>
+                                <i class="fa fa-users"></i>
+                                <strong>Website team</strong>                              
                             </div>
                             <div class="panel-body">
                                 <ul>
