@@ -6,7 +6,7 @@
         <title>Contact</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -33,6 +33,16 @@
                     <a href="mailto: alsdb@columbia.edu" target="_blank">
                         <i class="fa fa-envelope-o">
                             alsdb@columbia.edu
+                        </i>
+                    </a>
+                </address>
+
+                <address>
+                    <strong>Web Development</strong><br>
+                    Email: 
+                    <a href="mailto: z.ren@columbia.edu" target="_blank">
+                        <i class="fa fa-envelope-o">
+                            z.ren@columbia.edu
                         </i>
                     </a>
                 </address>
