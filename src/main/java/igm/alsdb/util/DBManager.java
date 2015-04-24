@@ -17,7 +17,8 @@ public class DBManager {
     public static void init() throws Exception {
         if (dataSource == null) {
             PoolProperties p = new PoolProperties();
-            p.setUrl("jdbc:mysql://localhost:3306/ALSdb");
+             p.setUrl("jdbc:mysql://10.73.50.60:3306/ALSdb");
+//            p.setUrl("jdbc:mysql://localhost:3306/ALSdb"); // for local debug
             p.setDriverClassName("com.mysql.jdbc.Driver");
             p.setUsername("alsdb_view");
             p.setPassword("alsdb_view_pwd");
