@@ -2,6 +2,7 @@ package igm.alsdb.model;
 
 import igm.alsdb.object.Region;
 import igm.alsdb.util.DBManager;
+import igm.alsdb.util.FormatManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +22,7 @@ public class Input {
         regionList.clear();
         idStr = "";
         table = "variantList";
+        Output.rvisPercentile = null;
 
         query = request.getParameter("query").toUpperCase();
 
@@ -31,6 +33,8 @@ public class Input {
             initRegionListByStr(query);
         } else {
             initRegionListByGeneName(query);
+
+            initRvisByGene(query);
         }
     }
 
@@ -63,6 +67,28 @@ public class Input {
             String regionStr = rset.getString("region");
 
             initRegionListByStr(regionStr);
+        }
+
+        rset.close();
+    }
+
+    private static void initRvisByGene(String geneName) throws Exception {
+        String sql = "SELECT * "
+                + "FROM rvis "
+                + "WHERE gene_name='" + geneName + "'";
+
+        ResultSet rset = DBManager.executeQuery(sql);
+
+        if (rset.next()) {
+            float f = FormatManager.getFloat(rset.getObject("rvis_percent"));
+
+            String value = FormatManager.getString(f);
+
+            if (value.equals("-")) {
+                Output.rvisPercentile = "NA";
+            }
+
+            Output.rvisPercentile = value + "%";
         }
 
         rset.close();

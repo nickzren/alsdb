@@ -32,7 +32,7 @@
                   title="Genic intolerance percentile score for gene">
                 <a class="white" href="http://chgv.org/GenicIntolerance/" target="_blank">
                     RVIS Percentile</a>: 
-                    <%=variantList.get(0).getAll01MafRvisPercentile()%>
+                    <%=request.getAttribute("rvisPercentile")%>
             </span>
             <%}
                     }%>

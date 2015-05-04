@@ -220,16 +220,6 @@ public class Variant {
         return annotation;
     }
 
-    public String getAll01MafRvisPercentile() {
-        String value = FormatManager.getString(rivsAll01MafPercentile);
-
-        if (value.equals("-")) {
-            return "NA";
-        }
-
-        return value + "%";
-    }
-
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();

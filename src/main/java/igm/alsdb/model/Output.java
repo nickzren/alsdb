@@ -14,6 +14,7 @@ public class Output {
 
     public static ArrayList<Variant> variantList = new ArrayList<Variant>();
     public static Variant variant;
+    public static String rvisPercentile;
     public static String errorMsg;
 
     public static void init() throws Exception {

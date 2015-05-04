@@ -10,12 +10,14 @@ import java.text.NumberFormat;
  */
 public class FormatManager {
 
+    private static NumberFormat format = new DecimalFormat("0.##");
+    
     public static String getString(float value) {
         if (value == Data.NA) {
             return "-";
         }
 
-        return String.valueOf(value);
+        return format.format(value);
     }
     
     public static boolean isNumeric(String str) {
