@@ -36,7 +36,7 @@
                 </p>
 
                 <p>
-                    <a href="http://chgv.org/download/snps_indels_v1.txt.gz">
+                    <a href="http://alsdb.org/download/snps_indels_v1.txt.gz">
                         <i class="fa fa-file"></i>
                         snps_indels_v1.txt.gz
                     </a> 
@@ -44,7 +44,7 @@
                 </p>
 
                 <p>
-                    <a href="http://chgv.org/download/coverage.all_sites_v1.txt.gz">
+                    <a href="http://alsdb.org/download/coverage.all_sites_v1.txt.gz">
                         <i class="fa fa-file"></i>
                         coverage.all_sites_v1.txt.gz
                     </a> 
