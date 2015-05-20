@@ -24,7 +24,7 @@
 
                 <h4><i class="fa fa-gavel"></i> Terms of use</h4>
                 <p>
-                    This web site is intended to provide results from exome sequencing data of mostly sporadic 
+                    This website is intended to provide results from exome sequencing data of mostly sporadic 
                     ALS samples. The contents of the ALSdb is intended strictly for educational and research purposes. 
                     The data derived from this website may not be used for any commercial purpose. The data from this 
                     website may not be replicated on any other website without written consent.

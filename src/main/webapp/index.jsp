@@ -57,7 +57,7 @@
                             </div>
                             <div class="panel-body">
                                 <ul>
-                                    <li><a href="http://www.igenmed.org/" target="_blank">IGM</a></li>
+                                    <li><a href="http://www.igenmed.org/" target="_blank">Institute for Genomic Medicine</a></li>
                                     <li><a href="http://hudsonalpha.org/" target="_blank">HudsonAlpha</a></li>
                                     <li><a href="http://www.laboguyrouleau.ca/" target="_blank">McGill University</a></li>
                                     <li><a href="http://gitlerlab.googlepages.com/" target="_blank">Stanford University</a></li>
@@ -76,6 +76,11 @@
                                     <li>
                                         <a href="http://als.umassmed.edu/" target="_blank">
                                             ALS Variant Server (AVS)
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://epi4kdb.org/" target="_blank">
+                                            Epi4K Data Browser (Epi4Kdb)
                                         </a>
                                     </li>
                                 </ul> 
