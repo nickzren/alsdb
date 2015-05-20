@@ -26,7 +26,7 @@
                 Variant Count: <%=variantList.size()%>
             </span>
             <%if (!query.contains(":")) // gene
-                    {%>
+                {%>
             &nbsp;
             <span class="label label-default" data-toggle="tooltip" 
                   title="Genic intolerance percentile score for gene">
@@ -35,7 +35,7 @@
                     <%=request.getAttribute("rvisPercentile")%>
             </span>
             <%}
-                    }%>
+                }%>
         </h4>
     </div>
 
@@ -76,6 +76,16 @@
                     Variant
                 </a>
             </th> 
+
+            <%if (query.contains(":")) // region search
+                {%>
+            <th class="text-center">
+                <a class="black">Gene</a>
+            </th> 
+            <%
+                }
+            %>
+
             <th class="text-center">
                 <a class="black" data-toggle="tooltip" 
                    title="Ensembl Transcript ID">
@@ -108,8 +118,8 @@
                 </a>
             </th>
             <th class="text-center" style="cursor: pointer;">
-                <a class="black" data-toggle="tooltip" 
-                   title="Minor Allele Frequency of variant">
+                <a class="black" data-toggle="tooltip"
+                   title="Minor Allele Frequency of variant in the case population">
                     MAF
                 </a>
             </th>
@@ -134,6 +144,14 @@
                     <%=variant.getIdStr()%>
                 </a>
             </td>
+            <%if (query.contains(":")) // region search
+                {%>
+            <td>
+                <%=variant.getAnnotation().getGeneName()%>
+            </td>
+            <%
+                }
+            %>
             <td>
                 <%=variant.getAnnotation().getTranscript()%>
             </td>
