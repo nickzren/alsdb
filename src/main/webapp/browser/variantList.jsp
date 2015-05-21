@@ -80,7 +80,10 @@
             <%if (query.contains(":")) // region search
                 {%>
             <th class="text-center">
-                <a class="black">Gene</a>
+                <a class="black" data-toggle="tooltip" 
+                   title="HGNC Gene name">
+                    Gene
+                </a>
             </th> 
             <%
                 }
