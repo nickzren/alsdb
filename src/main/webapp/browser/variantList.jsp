@@ -76,19 +76,12 @@
                     Variant
                 </a>
             </th> 
-
-            <%if (query.contains(":")) // region search
-                {%>
             <th class="text-center">
                 <a class="black" data-toggle="tooltip" 
                    title="HGNC Gene name">
                     Gene
                 </a>
             </th> 
-            <%
-                }
-            %>
-
             <th class="text-center">
                 <a class="black" data-toggle="tooltip" 
                    title="Ensembl Transcript ID">
@@ -147,14 +140,9 @@
                     <%=variant.getIdStr()%>
                 </a>
             </td>
-            <%if (query.contains(":")) // region search
-                {%>
             <td>
                 <%=variant.getAnnotation().getGeneName()%>
             </td>
-            <%
-                }
-            %>
             <td>
                 <%=variant.getAnnotation().getTranscript()%>
             </td>
@@ -195,9 +183,10 @@
             headers: {
                 1: {sorter: false},
                 2: {sorter: false},
-                4: {sorter: false},
+                3: {sorter: false},
                 5: {sorter: false},
-                7: {sorter: false}
+                6: {sorter: false},
+                8: {sorter: false}
             }
         });
 
