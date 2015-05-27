@@ -17,7 +17,7 @@ public class FormatManager {
             return "-";
         }
 
-        return format.format(value);
+        return Float.toString(value);
     }
     
     public static boolean isNumeric(String str) {
