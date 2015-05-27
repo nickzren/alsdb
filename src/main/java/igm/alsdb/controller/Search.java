@@ -23,7 +23,7 @@ public class Search extends HttpServlet {
                     || !Input.query.equalsIgnoreCase(request.getParameter("query"))) {
 
                 if (Download.rootPath == null) {
-                    Download.rootPath = getServletContext().getRealPath("/download/");
+                    Download.rootPath = getServletContext().getRealPath("/downloads/");
                 }
 
                 DBManager.init();
