@@ -120,7 +120,7 @@
                 </a>
             </th>
             <th class="text-center">
-                <a href="http://www.nature.com/ng/journal/v46/n3/abs/ng.2892.html"
+                <a href="http://cadd.gs.washington.edu/"
                    class="black" target="_blank" 
                    data-toggle="tooltip" title="The Combined Annotation Dependent Depletion (CADD) score">
                     CADD Score
