@@ -20,38 +20,86 @@
             <%@include file="base/header.jsp" %>
 
             <div class="container-main">
-                <h3 class="page-header">Download <span class="label label-primary">v1</span></h3>
+                <h3 class="page-header">Download</h3>
 
-                <p class="lead">
-                    The following flat files contain the full catalogue of SNVs, indels 
-                    and coverage data for 1,424 patients recruited and sequenced for 
-                    their Amyotrophic Lateral Sclerosis (ALS) diagnosis.
-                </p>
+                <div class="row">
+                    <div class="col-xs-6 col-md-9">
+                        <p class="lead">
+                            The following flat files contain the full catalogue of SNVs, indels 
+                            and coverage data for 2,869 patients recruited and sequenced for 
+                            their Amyotrophic Lateral Sclerosis (ALS) diagnosis.
+                        </p>
 
-                <p>
-                <u>
-                    Coordinates are currently based on GRCh37 (hg19), 
-                    and represent chromosomes 1-22, X and Y.
-                </u>
-                </p>
+                        <p>
+                        <u>
+                            Coordinates are currently based on GRCh37 (hg19), 
+                            and represent chromosomes 1-22, X and Y.
+                        </u>
+                        </p>
 
-                <p>
-                    <a href="http://alsdb.org/download/snps_indels_v1.txt.gz">
-                        <i class="fa fa-file"></i>
-                        snps_indels_v1.txt.gz
-                    </a> 
-                    (variant annotation file in tab-delimited text format)
-                </p>
+                        <p>
+                            <a href="http://alsdb.org/download/snps_indels_v2.txt.gz">
+                                <i class="fa fa-file"></i>
+                                snps_indels_v2.txt.gz
+                            </a> 
+                            (variant annotation file in tab-delimited text format)
+                        </p>
 
-                <p>
-                    <a href="http://alsdb.org/download/coverage.all_sites_v1.txt.gz">
-                        <i class="fa fa-file"></i>
-                        coverage.all_sites_v1.txt.gz
-                    </a> 
-                    (sequencing coverage file for all carrier and non-carrier sites within our target regions)
-                </p>
+                        <p>
+                            <a href="http://alsdb.org/download/coverage.all_sites_v2.txt.gz">
+                                <i class="fa fa-file"></i>
+                                coverage.all_sites_v2.txt.gz
+                            </a> 
+                            (sequencing coverage file for all carrier and non-carrier sites within our target regions)
+                        </p>
 
-                <small>The current release (v1) was last updated on <em>02/27/2015</em>.</small>
+                        <small>v2 data was last updated on <em>June ?, 2015</em>.</small>
+
+                        <hr>
+
+                        <p>
+                            <a href="http://alsdb.org/download/snps_indels_v1.txt.gz">
+                                <i class="fa fa-file"></i>
+                                snps_indels_v1.txt.gz
+                            </a>
+                        </p>
+
+                        <p>
+                            <a href="http://alsdb.org/download/coverage.all_sites_v1.txt.gz">
+                                <i class="fa fa-file"></i>
+                                coverage.all_sites_v1.txt.gz
+                            </a>
+                        </p>
+
+                        <small>v1 data was last updated on <em>Feb 27, 2015</em>.</small>
+                    </div>
+
+                    <div class="col-xs-6 col-md-3">
+                        <div class="news">
+                            <h5>Latest News</h5>
+
+                            <ul class="list-unstyled">
+                                <li>Released v2 data
+                                    <small class="gray">(June ?, 2015)</small>
+                                </li>
+                                <ul>
+                                    <li>
+                                        <small>added 1,425 more patients data</small>
+                                    </li>
+                                </ul>
+
+                                <li>Released v1 data
+                                    <small class="gray">(Feb 27, 2015)</small>
+                                </li>
+                                <ul>
+                                    <li>
+                                        <small>1,424 patients data</small>
+                                    </li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

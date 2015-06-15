@@ -140,7 +140,7 @@ public class Variant {
 
     public void initAnnotationMap() throws Exception {
         String sql = "SELECT * "
-                + "FROM annotation "
+                + "FROM annotation_HA "
                 + "WHERE variant_id = " + id + " "
                 + "ORDER BY igm_rank;";
 

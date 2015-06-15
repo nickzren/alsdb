@@ -20,9 +20,9 @@ a.brand-link {
 }
 
 .page-header {
-  padding-bottom: 9px;
-  margin: 0 0 25px;
-  border-bottom: 1px solid #eee;
+    padding-bottom: 9px;
+    margin: 0 0 25px;
+    border-bottom: 1px solid #eee;
 }
 
 a.black {
@@ -62,4 +62,22 @@ a.white {
 
 .tooltip.in{
     opacity:.8;
+}
+
+.news {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #555;
+    background: #fef4e9;
+    border-radius: 6px;
+    padding: 4px 12px 1px 12px;
+}
+
+.news ul li {
+  margin-bottom: 8px;
+}
+
+.gray{
+    color: rgb(136, 136, 136);
 }
