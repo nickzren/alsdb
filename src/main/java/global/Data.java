@@ -1,4 +1,4 @@
-package igm.alsdb.global;
+package global;
 
 /**
  *

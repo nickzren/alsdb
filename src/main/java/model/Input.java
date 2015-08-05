@@ -1,8 +1,8 @@
-package igm.alsdb.model;
+package model;
 
-import igm.alsdb.object.Region;
-import igm.alsdb.util.DBManager;
-import igm.alsdb.util.FormatManager;
+import object.Region;
+import util.DBManager;
+import util.FormatManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;

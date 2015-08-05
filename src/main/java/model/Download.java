@@ -1,6 +1,6 @@
-package igm.alsdb.model;
+package model;
 
-import igm.alsdb.object.Variant;
+import object.Variant;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;

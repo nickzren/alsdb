@@ -1,7 +1,7 @@
-package igm.alsdb.object;
+package object;
 
-import igm.alsdb.util.DBManager;
-import igm.alsdb.util.FormatManager;
+import util.DBManager;
+import util.FormatManager;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;

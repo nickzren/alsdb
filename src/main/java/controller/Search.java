@@ -1,9 +1,9 @@
-package igm.alsdb.controller;
+package controller;
 
-import igm.alsdb.model.Download;
-import igm.alsdb.util.DBManager;
-import igm.alsdb.model.Input;
-import igm.alsdb.model.Output;
+import model.Download;
+import util.DBManager;
+import model.Input;
+import model.Output;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

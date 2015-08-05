@@ -1,6 +1,6 @@
-package igm.alsdb.util;
+package util;
 
-import igm.alsdb.global.Data;
+import global.Data;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 

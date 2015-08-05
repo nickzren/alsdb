@@ -1,4 +1,4 @@
-package igm.alsdb.object;
+package object;
 
 /**
  *

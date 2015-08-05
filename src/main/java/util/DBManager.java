@@ -1,4 +1,4 @@
-package igm.alsdb.util;
+package util;
 
 import java.sql.*;
 import org.apache.tomcat.jdbc.pool.DataSource;

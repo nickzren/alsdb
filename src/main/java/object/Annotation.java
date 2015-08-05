@@ -1,6 +1,6 @@
-package igm.alsdb.object;
+package object;
 
-import igm.alsdb.util.FormatManager;
+import util.FormatManager;
 import java.sql.ResultSet;
 
 /**
