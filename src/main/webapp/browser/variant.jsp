@@ -1,5 +1,5 @@
-<%@page import="object.Variant"%>
 <%@page import="object.Annotation"%>
+<%@page import="object.Variant"%>
 <%@page import="java.util.ArrayList"%>
 
 <%

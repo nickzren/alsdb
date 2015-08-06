@@ -1,6 +1,10 @@
 package util;
 
+import global.Data;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.sql.*;
+import java.util.Properties;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.apache.tomcat.jdbc.pool.PoolProperties;
 
@@ -14,14 +18,19 @@ public class DBManager {
     private static Connection connection;
     private static Statement statement;
 
+    private static String dbUrl;
+    private static String dbUser;
+    private static String dbPassword;
+
     public static void init() throws Exception {
+        initDataFromSystemConfig();
+        
         if (dataSource == null) {
             PoolProperties p = new PoolProperties();
-             p.setUrl("jdbc:mysql://10.73.50.60:3306/ALSdb");
-//            p.setUrl("jdbc:mysql://localhost:3306/ALSdb"); // for local debug
             p.setDriverClassName("com.mysql.jdbc.Driver");
-            p.setUsername("alsdb_view");
-            p.setPassword("alsdb_view_pwd");
+            p.setUrl(dbUrl);
+            p.setUsername(dbUser);
+            p.setPassword(dbPassword);
             p.setJmxEnabled(true);
             p.setTestWhileIdle(false);
             p.setTestOnBorrow(true);
@@ -51,6 +60,26 @@ public class DBManager {
             statement = connection.createStatement();
         } else if (statement.isClosed()) {
             statement = connection.createStatement();
+        }
+    }
+
+    private static void initDataFromSystemConfig() {
+        try {
+            // server config
+            InputStream input = new FileInputStream(Data.SYSTEM_CONFIG);
+            Properties prop = new Properties();
+            prop.load(input);
+
+            dbUrl = prop.getProperty("dburl");
+            dbUser = prop.getProperty("dbuser");
+            dbPassword = prop.getProperty("dbpassword");
+            
+            // local config
+//             dbUrl = "jdbc:mysql://localhost:3306/ALSdb";
+//             dbUser = "alsdb_view";
+//             dbPassword = "alsdb_view_pwd";
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
