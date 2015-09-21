@@ -37,7 +37,7 @@ public class Output {
         String[] tmp = Input.idStr.split("-");
 
         String sql = "SELECT * "
-                + "FROM merged_variant "
+                + "FROM merged_variant_CCDS_v2 "
                 + "WHERE chr='" + tmp[0] + "' "
                 + "AND pos=" + tmp[1] + " "
                 + "AND ref='" + tmp[2] + "' "
@@ -56,7 +56,7 @@ public class Output {
 
     public static void initVariantList() throws Exception {
         String sql = "SELECT * "
-                + "FROM merged_variant "
+                + "FROM merged_variant_CCDS_v2 "
                 + "WHERE ";
 
         sql = addRegionSql(sql);

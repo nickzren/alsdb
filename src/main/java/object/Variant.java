@@ -21,9 +21,9 @@ public class Variant {
     private String type;
     private boolean isMinorRef;
     private float cScore;
-    private int majorHom;
+    private int hom;
     private int het;
-    private int minorHom;
+    private int homRef;
     private int qcFailedSamples;
     private float maf;
     private float hweP;
@@ -52,9 +52,9 @@ public class Variant {
             + "Variant,"
             + "Variant_type,"
             + "Is_minor_ref,"
-            + "Major_homoz,"
+            + "Homoz,"
             + "Heteroz,"
-            + "Minor_homoz,"
+            + "Homoz_ref,"
             + "QC_failed_samples,"
             + "Case_maf,"
             + "Case_HWE_p,"
@@ -109,9 +109,9 @@ public class Variant {
         type = rset.getString("variant_type");
         isMinorRef = rset.getBoolean("is_minor_ref");
         cScore = FormatManager.getFloat(rset.getObject("c_score_phred"));
-        majorHom = rset.getInt("major_hom");
+        hom = rset.getInt("hom");
         het = rset.getInt("het");
-        minorHom = rset.getInt("minor_hom");
+        homRef = rset.getInt("hom_ref");
         qcFailedSamples = rset.getInt("QC_failed_samples");
         maf = rset.getFloat("case_maf");
         hweP = rset.getFloat("case_hwe_p");
@@ -193,15 +193,15 @@ public class Variant {
     }
 
     public int getAlleleCount() {
-        return 2 * minorHom + het;
+        return 2 * hom + het;
     }
 
     public int getSampleCount() {
-        return minorHom + het + majorHom;
+        return homRef + het + hom;
     }
 
     public int getHomozygousCount() {
-        return minorHom;
+        return hom;
     }
 
     public float getMaf() {
@@ -229,9 +229,9 @@ public class Variant {
         sb.append(allele).append(",");
         sb.append(type).append(",");
         sb.append(isMinorRef).append(",");
-        sb.append(majorHom).append(",");
+        sb.append(hom).append(",");
         sb.append(het).append(",");
-        sb.append(minorHom).append(",");
+        sb.append(homRef).append(",");
         sb.append(qcFailedSamples).append(",");
         sb.append(maf).append(",");
         sb.append(hweP).append(",");
