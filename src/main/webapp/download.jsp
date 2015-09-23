@@ -53,7 +53,7 @@
                             (sequencing coverage file for all carrier and non-carrier sites within our target regions)
                         </p>
 
-                        <small>v2 data was last updated on <em>June ?, 2015</em>.</small>
+                        <small>v2 data was last updated on <em>Sept 23, 2015</em>.</small>
 
                         <hr>
 
@@ -80,11 +80,11 @@
 
                             <ul class="list-unstyled">
                                 <li>Released v2 data
-                                    <small class="gray">(June ?, 2015)</small>
+                                    <small class="gray">(Sept 23, 2015)</small>
                                 </li>
                                 <ul>
                                     <li>
-                                        <small>added 1,425 more patients data</small>
+                                        <small>combined 1,425 HA patients data</small>
                                     </li>
                                 </ul>
 
@@ -93,7 +93,7 @@
                                 </li>
                                 <ul>
                                     <li>
-                                        <small>1,424 patients data</small>
+                                        <small>1,424 IGM patients data</small>
                                     </li>
                                 </ul>
                             </ul>
