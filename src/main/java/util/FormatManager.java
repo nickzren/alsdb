@@ -11,7 +11,7 @@ import java.text.NumberFormat;
 public class FormatManager {
 
     private static NumberFormat format = new DecimalFormat("0.##");
-    
+
     public static String getString(float value) {
         if (value == Data.NA) {
             return "-";
@@ -19,7 +19,15 @@ public class FormatManager {
 
         return Float.toString(value);
     }
-    
+
+    public static String format(float value) {
+        if (value == Data.NA) {
+            return "-";
+        }
+
+        return format.format(value);
+    }
+
     public static boolean isNumeric(String str) {
         return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }

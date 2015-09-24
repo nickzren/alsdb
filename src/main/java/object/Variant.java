@@ -142,7 +142,9 @@ public class Variant {
         String sql = "SELECT * "
                 + "FROM annotation_v2 "
                 + "WHERE variant_id = " + id + " "
-                + "ORDER BY igm_rank;";
+                + "ORDER BY igm_rank,"
+                // when igm_rank is the same, the data sort by "Canonical" = "YES"
+                + "case when canonical is null then 1 else 0 end,canonical;";
 
         ResultSet rset = DBManager.executeQuery(sql);
 
@@ -249,9 +251,9 @@ public class Variant {
         sb.append(FormatManager.getString(evsAfrMaf)).append(",");
         sb.append(FormatManager.getString(evsAllMaf)).append(",");
 
-        sb.append(FormatManager.getString(rivsAll01MafPercentile)).append(",");
+        sb.append(FormatManager.format(rivsAll01MafPercentile)).append(",");
         sb.append(rivsEdgecase).append(",");
-        sb.append(FormatManager.getString(rivsOeratioPercentile)).append(",");
+        sb.append(FormatManager.format(rivsOeratioPercentile)).append(",");
 
         sb.append(annotation.getGeneName()).append(",");
         sb.append(annotation.getTranscript()).append(",");
