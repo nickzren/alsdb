@@ -118,7 +118,7 @@ public class Variant {
 
         rivsAll01MafPercentile = FormatManager.getFloat(rset.getObject("rvis_all_01maf_percentile"));
         rivsOeratioPercentile = FormatManager.getFloat(rset.getObject("rvis_oeratio_percentile"));
-        rivsEdgecase = rset.getString("rvis_edgecase");
+        rivsEdgecase = FormatManager.getString(rset.getString("rvis_edgecase"));
 
         exacGlobalMaf = FormatManager.getFloat(rset.getObject("exac_global_maf"));
         exacAfrMaf = FormatManager.getFloat(rset.getObject("exac_afr_maf"));
@@ -132,8 +132,8 @@ public class Variant {
         evsEurMaf = FormatManager.getFloat(rset.getObject("evs_eur_maf"));
         evsAfrMaf = FormatManager.getFloat(rset.getObject("evs_afr_maf"));
         evsAllMaf = FormatManager.getFloat(rset.getObject("evs_all_maf"));
+        
         evsFilter = FormatManager.getString(rset.getString("evs_filter"));
-
         annodbFilter = FormatManager.getString(rset.getString("annodb_filter"));
         hweFilter = FormatManager.getString(rset.getString("HWE_filter"));
     }
