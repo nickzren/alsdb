@@ -44,7 +44,6 @@ public class Download {
 
                 for (Variant variant : Output.variantList) {
                     bw.write(variant.toString());
-                    bw.newLine();
                 }
 
                 bw.flush();

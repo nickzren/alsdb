@@ -132,7 +132,7 @@ public class Variant {
         evsEurMaf = FormatManager.getFloat(rset.getObject("evs_eur_maf"));
         evsAfrMaf = FormatManager.getFloat(rset.getObject("evs_afr_maf"));
         evsAllMaf = FormatManager.getFloat(rset.getObject("evs_all_maf"));
-        
+
         evsFilter = FormatManager.getString(rset.getString("evs_filter"));
         annodbFilter = FormatManager.getString(rset.getString("annodb_filter"));
         hweFilter = FormatManager.getString(rset.getString("HWE_filter"));
@@ -180,7 +180,7 @@ public class Variant {
     public int getChrInt() {
         return chrInt;
     }
-    
+
     public int getPosition() {
         return position;
 
@@ -225,50 +225,59 @@ public class Variant {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(chr).append(",");
-        sb.append(position).append(",");
-        sb.append(ref).append(",");
-        sb.append(allele).append(",");
-        sb.append(type).append(",");
-        sb.append(isMinorRef).append(",");
-        sb.append(hom).append(",");
-        sb.append(het).append(",");
-        sb.append(homRef).append(",");
-        sb.append(qcFailedSamples).append(",");
-        sb.append(maf).append(",");
-        sb.append(hweP).append(",");
 
-        sb.append(FormatManager.getString(exacGlobalMaf)).append(",");
-        sb.append(FormatManager.getString(exacAfrMaf)).append(",");
-        sb.append(FormatManager.getString(exacAmrMaf)).append(",");
-        sb.append(FormatManager.getString(exacEasMaf)).append(",");
-        sb.append(FormatManager.getString(exacSasMaf)).append(",");
-        sb.append(FormatManager.getString(exacFinMaf)).append(",");
-        sb.append(FormatManager.getString(exacNfeMaf)).append(",");
-        sb.append(FormatManager.getString(exacOthMaf)).append(",");
+        ArrayList<Annotation> annotationList = new ArrayList<Annotation>();
 
-        sb.append(FormatManager.getString(evsEurMaf)).append(",");
-        sb.append(FormatManager.getString(evsAfrMaf)).append(",");
-        sb.append(FormatManager.getString(evsAllMaf)).append(",");
+        for (ArrayList<Annotation> list : geneAnnotationMap.values()) {
+            annotationList.addAll(list);
+        }
 
-        sb.append(FormatManager.format(rivsAll01MafPercentile)).append(",");
-        sb.append(rivsEdgecase).append(",");
-        sb.append(FormatManager.format(rivsOeratioPercentile)).append(",");
+        for (Annotation annotation : annotationList) {
+            sb.append(chr).append(",");
+            sb.append(position).append(",");
+            sb.append(ref).append(",");
+            sb.append(allele).append(",");
+            sb.append(type).append(",");
+            sb.append(isMinorRef).append(",");
+            sb.append(hom).append(",");
+            sb.append(het).append(",");
+            sb.append(homRef).append(",");
+            sb.append(qcFailedSamples).append(",");
+            sb.append(maf).append(",");
+            sb.append(hweP).append(",");
 
-        sb.append(annotation.getGeneName()).append(",");
-        sb.append(annotation.getTranscript()).append(",");
-        sb.append(annotation.getCanonical()).append(",");
-        sb.append(annotation.getCodonChange()).append(",");
-        sb.append(annotation.getAaChange()).append(",");
-        sb.append(annotation.getCcds()).append(",");
-        sb.append(annotation.getConsequence()).append(",");
-        sb.append(FormatManager.getString(cScore)).append(",");
-        sb.append(annotation.getPolyphenHumvar()).append(",");
-        sb.append(annotation.getSift()).append(",");
+            sb.append(FormatManager.getString(exacGlobalMaf)).append(",");
+            sb.append(FormatManager.getString(exacAfrMaf)).append(",");
+            sb.append(FormatManager.getString(exacAmrMaf)).append(",");
+            sb.append(FormatManager.getString(exacEasMaf)).append(",");
+            sb.append(FormatManager.getString(exacSasMaf)).append(",");
+            sb.append(FormatManager.getString(exacFinMaf)).append(",");
+            sb.append(FormatManager.getString(exacNfeMaf)).append(",");
+            sb.append(FormatManager.getString(exacOthMaf)).append(",");
 
-        sb.append(evsFilter).append(",");
-        sb.append(annodbFilter).append(",");
-        sb.append(hweFilter);
+            sb.append(FormatManager.getString(evsEurMaf)).append(",");
+            sb.append(FormatManager.getString(evsAfrMaf)).append(",");
+            sb.append(FormatManager.getString(evsAllMaf)).append(",");
+
+            sb.append(FormatManager.format(rivsAll01MafPercentile)).append(",");
+            sb.append(rivsEdgecase).append(",");
+            sb.append(FormatManager.format(rivsOeratioPercentile)).append(",");
+
+            sb.append(annotation.getGeneName()).append(",");
+            sb.append(annotation.getTranscript()).append(",");
+            sb.append(annotation.getCanonical()).append(",");
+            sb.append(annotation.getCodonChange()).append(",");
+            sb.append(annotation.getAaChange()).append(",");
+            sb.append(annotation.getCcds()).append(",");
+            sb.append(annotation.getConsequence()).append(",");
+            sb.append(FormatManager.getString(cScore)).append(",");
+            sb.append(annotation.getPolyphenHumvar()).append(",");
+            sb.append(annotation.getSift()).append(",");
+
+            sb.append(evsFilter).append(",");
+            sb.append(annodbFilter).append(",");
+            sb.append(hweFilter).append("\n");
+        }
 
         return sb.toString();
     }
