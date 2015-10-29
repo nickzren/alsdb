@@ -121,7 +121,7 @@
             <th class="text-center">
                 <a href="http://cadd.gs.washington.edu/"
                    class="black" target="_blank" 
-                   data-toggle="tooltip" title="The Combined Annotation Dependent Depletion (CADD) score">
+                   data-toggle="tooltip" title="The Combined Annotation Dependent Depletion (CADD) score v1.0">
                     CADD Score
                 </a>
             </th>
