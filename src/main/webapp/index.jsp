@@ -83,6 +83,11 @@
                                             Epi4K Data Browser (Epi4Kdb)
                                         </a>
                                     </li>
+                                    <li>
+                                        <a href="http://genic-intolerance.org/" target="_blank">
+                                            Residual Variation Intolerance Score (RVIS)
+                                        </a>
+                                    </li>
                                 </ul> 
                             </div>
                         </div>  
