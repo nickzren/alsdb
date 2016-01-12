@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>ALS Data Browser (ALSdB) | ALS | Amyotrophic Lateral Sclerosis</title>
+        <title>ALS Data Browser (ALSdb) | ALS | Amyotrophic Lateral Sclerosis</title>
 
         <meta name="description" content="The ALS Data Browser is a catalogue of genetic variants 
               identified from 1,424 Caucasian patients recruited and sequenced for 
