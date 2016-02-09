@@ -76,8 +76,8 @@ public class DBManager {
             
             // local config
 //             dbUrl = "jdbc:mysql://localhost:3306/ALSdb";
-//             dbUser = "alsdb_view";
-//             dbPassword = "alsdb_view_pwd";
+//             dbUser = "test";
+//             dbPassword = "test";
         } catch (Exception e) {
             e.printStackTrace();
         }
