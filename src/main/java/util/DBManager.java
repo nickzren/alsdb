@@ -75,7 +75,7 @@ public class DBManager {
             dbPassword = prop.getProperty("dbpassword");
             
             // local config
-//             dbUrl = "jdbc:mysql://localhost:3306/ALSdb";
+//             dbUrl = "jdbc:mysql://localhost:3306/alsdb";
 //             dbUser = "test";
 //             dbPassword = "test";
         } catch (Exception e) {

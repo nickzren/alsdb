@@ -21,9 +21,9 @@ public class Variant {
     private String type;
     private boolean isMinorRef;
     private float cScore;
-    private int hom;
+    private int major_hom;
     private int het;
-    private int homRef;
+    private int minor_hom;
     private int qcFailedSamples;
     private float maf;
     private float hweP;
@@ -109,9 +109,9 @@ public class Variant {
         type = rset.getString("variant_type");
         isMinorRef = rset.getBoolean("is_minor_ref");
         cScore = FormatManager.getFloat(rset.getObject("c_score_phred"));
-        hom = rset.getInt("hom");
+        major_hom = rset.getInt("major_hom");
         het = rset.getInt("het");
-        homRef = rset.getInt("hom_ref");
+        minor_hom = rset.getInt("minor_hom");
         qcFailedSamples = rset.getInt("QC_failed_samples");
         maf = rset.getFloat("case_maf");
         hweP = rset.getFloat("case_hwe_p");
@@ -140,7 +140,7 @@ public class Variant {
 
     public void initAnnotationMap() throws Exception {
         String sql = "SELECT * "
-                + "FROM annotation_v2 "
+                + "FROM annotation "
                 + "WHERE variant_id = " + id + " "
                 + "ORDER BY igm_rank,"
                 // when igm_rank is the same, the data sort by "Canonical" = "YES"
@@ -195,15 +195,15 @@ public class Variant {
     }
 
     public int getAlleleCount() {
-        return 2 * hom + het;
+        if (isMinorRef) {
+            return 2 * major_hom + het;
+        } else {
+            return 2 * minor_hom + het;
+        }
     }
 
     public int getSampleCount() {
-        return homRef + het + hom;
-    }
-
-    public int getHomozygousCount() {
-        return hom;
+        return minor_hom + het + major_hom;
     }
 
     public float getMaf() {
@@ -239,9 +239,9 @@ public class Variant {
             sb.append(allele).append(",");
             sb.append(type).append(",");
             sb.append(isMinorRef).append(",");
-            sb.append(hom).append(",");
+            sb.append(major_hom).append(",");
             sb.append(het).append(",");
-            sb.append(homRef).append(",");
+            sb.append(minor_hom).append(",");
             sb.append(qcFailedSamples).append(",");
             sb.append(maf).append(",");
             sb.append(hweP).append(",");

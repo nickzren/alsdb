@@ -25,7 +25,7 @@
             <div class="container-main">
                 <h3 class="page-header">Data Browser 
                     <a class="black" href="download.jsp">
-                        <span class="label label-primary">v2</span>
+                        <span class="label label-primary">v1</span>
                     </a>
                 </h3>
 
