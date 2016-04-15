@@ -26,7 +26,7 @@
                     <div class="col-xs-6 col-md-9">
                         <p class="lead">
                             The following flat files contain the full catalogue of SNVs, indels 
-                            and coverage data for 2,869 patients recruited and sequenced for 
+                            and coverage data for 1,424 patients recruited and sequenced for 
                             their Amyotrophic Lateral Sclerosis (ALS) diagnosis.
                         </p>
 

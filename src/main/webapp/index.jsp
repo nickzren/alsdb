@@ -20,6 +20,11 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/jquery-latest.min.js"></script>    
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.tablesorter.js"></script>
+        <script src="js/jquery.tablesorter.widgets.js"></script>
     </head>
 
     <body>
@@ -28,91 +33,44 @@
             <%@include file="base/header.jsp" %>
 
             <div class="container-main">
+
                 <div class="jumbotron" style="padding:20px 40px 20px 50px">
-                    <h1>ALSdb</h1>
-                    <p>The ALS Data Browser is a catalogue of genetic variants identified from 
-                        <a href="download.jsp">1,424 Caucasian patients</a> 
-                        recruited and sequenced for their diagnosis of Amyotrophic Lateral Sclerosis. 
-                        Approximately 93.5% of these cases are sporadic. 
-                        The database includes single nucleotide substitution variants 
-                        (SNVs) and insertion and deletion (indels) variants. 
-                        Funding for this study was provided by Biogen Idec.</p>
-                    <p>
-                        <a class="btn btn-primary btn-lg" href="browser.jsp">
-                            <i class="fa fa-bar-chart">
-                                Browse data now!
-                            </i>
-                        </a>
+                    <h2>Data Browser 
+                        <small>
+                            <a href="download.jsp">
+                                <span class="label label-default">v1</span>
+                            </a>
+                        </small>
+                    </h2>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <form class="form-search" action="Search">
+                                <div class="input-group">
+                                    <input name="query" class="form-control input-lg tt-input"
+                                           type="text" placeholder="Search for a gene or region or variant" >
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default input-lg tt-input" 
+                                                type="submit">
+                                            <i class="glyphicon glyphicon-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <p class="text-muted" style="margin-left: 5px">
+                        Examples - 
+                        Gene: <a href="Search?query=TBK1">TBK1</a>,
+                        Region: <a href="Search?query=21:33032075-33040899">21:33032075-33040899</a>, 
+                        Variant: <a href="Search?query=14-21162090-G-A">14-21162090-G-A</a>
                     </p>
+
                 </div>
 
                 <br/>
 
-                <div class="row">
-                    <div class="col-xs-6 col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-university"></i>
-                                <strong>Sequencing centers</strong>
-                            </div>
-                            <div class="panel-body">
-                                <ul>
-                                    <li><a href="http://igm.columbia.edu" target="_blank">Institute for Genomic Medicine</a></li>
-                                    <li><a href="http://hudsonalpha.org/" target="_blank">HudsonAlpha</a></li>
-                                    <li><a href="http://www.laboguyrouleau.ca/" target="_blank">McGill University</a></li>
-                                    <li><a href="http://gitlerlab.googlepages.com/" target="_blank">Stanford University</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-link"></i>
-                                <strong>Affiliate sites</strong>
-                            </div>
-                            <div class="panel-body">
-                                <ul>
-                                    <li>
-                                        <a href="http://als.umassmed.edu/" target="_blank">
-                                            ALS Variant Server (AVS)
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://epi4kdb.org/" target="_blank">
-                                            Epi4K Data Browser (Epi4Kdb)
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="http://genic-intolerance.org/" target="_blank">
-                                            Residual Variation Intolerance Score (RVIS)
-                                        </a>
-                                    </li>
-                                </ul> 
-                            </div>
-                        </div>  
-                    </div>
-                    <div class="col-xs-6 col-md-4">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-users"></i>
-                                <strong>Website team</strong>                              
-                            </div>
-                            <div class="panel-body">
-                                <ul>
-                                    <li>
-                                        <a class="black" href="https://github.com/nickzren" target="_blank">
-                                            Nick Ren
-                                        </a>
-                                    </li>  
-                                    <li>Joshua Bridgers</li>                          
-                                    <li>Quanli Wang</li>
-                                    <li>Slavé Petrovski</li>
-                                </ul> 
-                            </div>
-                        </div>  
-                    </div>
-                </div>
+                <%@include file="browser/result.jsp" %>  
             </div>
         </div>
 
