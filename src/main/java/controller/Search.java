@@ -35,7 +35,7 @@ public class Search extends HttpServlet {
 
             setRequest(request);
 
-            request.getRequestDispatcher("browser.jsp").forward(request, response);
+            request.getRequestDispatcher("index.jsp").forward(request, response);
         } catch (Exception ex) {
             request.getRequestDispatcher("error.jsp").forward(request, response);
         }
