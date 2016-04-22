@@ -24,7 +24,7 @@ public class DBManager {
 
     public static void init() throws Exception {
         initDataFromSystemConfig();
-        
+
         if (dataSource == null) {
             PoolProperties p = new PoolProperties();
             p.setDriverClassName("com.mysql.jdbc.Driver");
@@ -55,7 +55,7 @@ public class DBManager {
             statement = connection.createStatement();
         }
 
-        if (connection.isClosed()) {
+        if (connection == null || connection.isClosed()) {
             connection = dataSource.getConnection();
             statement = connection.createStatement();
         } else if (statement.isClosed()) {
@@ -73,7 +73,7 @@ public class DBManager {
             dbUrl = prop.getProperty("dburl");
             dbUser = prop.getProperty("dbuser");
             dbPassword = prop.getProperty("dbpassword");
-            
+
             // local config
 //             dbUrl = "jdbc:mysql://localhost:3306/alsdb";
 //             dbUser = "test";
