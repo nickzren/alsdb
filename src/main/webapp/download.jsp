@@ -38,30 +38,30 @@
                         </p>
 
                         <p>
-                            <a href="http://alsdb.org/download/all_samples_snps_indels_v2.txt.gz">
+                            <a href="http://alsdb.org/download/all_samples_snps_indels_v2.tsv.gz">
                                 <i class="fa fa-file"></i>
-                                all_samples_snps_indels_v2.txt.gz
+                                all_samples_snps_indels_v2.tsv.gz
                             </a> 
                             (Variants data from 2,800 samples)
                         </p>
 
                         <p>
-                            <a href="http://alsdb.org/download/samples_pruned_snps_indels_v2.txt.gz">
+                            <a href="http://alsdb.org/download/samples_pruned_snps_indels_v2.tsv.gz">
                                 <i class="fa fa-file"></i>
-                                samples_pruned_snps_indels_v2.txt.gz
+                                samples_pruned_snps_indels_v2.tsv.gz
                             </a> 
                             (Variants data from 2,638 pruned samples)
                         </p>
                         
                         <p>
-                            <a href="http://alsdb.org/download/site_coverage_3_10_20_201_v2.csv.gz">
+                            <a href="http://alsdb.org/download/coverage.all_sites_v2.txt.gz">
                                 <i class="fa fa-file"></i>
-                                site_coverage_3_10_20_201_v2.csv.gz
+                                coverage.all_sites_v2.txt.gz
                             </a> 
                             (Sequencing per base coverage data from 2,800 samples)
                         </p>
 
-                        <small>v2 data was last updated on <em>Oct 13, 2016</em>.</small>
+                        <small>v2 data was last updated on <em>Oct 19, 2016</em>.</small>
 
                         <hr>
 
@@ -90,7 +90,7 @@
 
                             <ul class="list-unstyled">
                                 <li>Released v2 data
-                                    <small class="gray">(Oct 13, 2016)</small>
+                                    <small class="gray">(Oct 19, 2016)</small>
                                 </li>
                                 <ul>
                                     <li>
