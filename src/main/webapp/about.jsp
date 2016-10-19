@@ -23,7 +23,7 @@
                 <h3 class="page-header">About</h3>
 
                 <p class="lead">
-                    The ALS Data Browser is a catalogue of genetic variants identified from 1,424 Caucasian patients recruited 
+                    The ALS Data Browser is a catalogue of genetic variants identified from 2,800 Caucasian patients recruited 
                     and sequenced for their diagnosis of Amyotrophic Lateral Sclerosis. Approximately 93.5% of these cases 
                     are sporadic. The database includes single nucleotide substitution variants (SNVs) 
                     and insertion and deletion (indels) variants. Funding for this study was provided by Biogen Idec.
@@ -67,7 +67,7 @@
                 </p>
 
                 <p>Coverage information for carrier and non-carrier sites is summarized as the 
-                    percentage of 1,424 sequenced patients with ALS that had at 
+                    percentage of 2,800 sequenced patients with ALS that had at 
                     least 3x, 10x, 20x and 201x read-depth coverage at the site.
                 </p>
                 
@@ -75,7 +75,7 @@
                 
                 <h4><i class="fa fa-users"></i> Website team</h4>
                 
-                <p>Nick Ren, Joshua Bridgers, Quanli Wang, Slavé Petrovski</p>
+                <p>Nick Ren, Joshua Bridgers, Raghavendra Padmanabhan, Slavé Petrovski</p>
             </div>
         </div>
 

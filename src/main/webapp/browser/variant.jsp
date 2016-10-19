@@ -1,3 +1,4 @@
+<%@page import="util.FormatManager"%>
 <%@page import="object.Annotation"%>
 <%@page import="object.Variant"%>
 <%@page import="java.util.ArrayList"%>
@@ -36,7 +37,7 @@
             &nbsp;
             <span class="label label-default" data-toggle="tooltip" 
                   title="The Combined Annotation Dependent Depletion (CADD) score">
-                CADD Score: <%=variant.getCscore()%>
+                CADD Score: <%=FormatManager.getString(variant.getCscore())%>
             </span>
             <%}%>
         </h4>

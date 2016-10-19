@@ -26,7 +26,7 @@
                     <div class="col-xs-6 col-md-9">
                         <p class="lead">
                             The following flat files contain the full catalogue of SNVs, indels 
-                            and coverage data for 1,424 patients recruited and sequenced for 
+                            and coverage data for 2,800 patients recruited and sequenced for 
                             their Amyotrophic Lateral Sclerosis (ALS) diagnosis.
                         </p>
 
@@ -38,23 +38,31 @@
                         </p>
 
                         <p>
-                            <a href="http://alsdb.org/download/snps_indels_v1.txt.gz">
+                            <a href="http://alsdb.org/download/all_samples_snps_indels_v2.txt.gz">
                                 <i class="fa fa-file"></i>
-                                snps_indels_v1.txt.gz
+                                all_samples_snps_indels_v2.txt.gz
                             </a> 
-                            (variant annotation file in tab-delimited text format)
+                            (Variants data from 2,800 samples)
                         </p>
 
                         <p>
-                            <a href="http://alsdb.org/download/coverage.all_sites_v1.txt.gz">
+                            <a href="http://alsdb.org/download/samples_pruned_snps_indels_v2.txt.gz">
                                 <i class="fa fa-file"></i>
-                                coverage.all_sites_v1.txt.gz
+                                samples_pruned_snps_indels_v2.txt.gz
                             </a> 
-                            (sequencing coverage file for all carrier and non-carrier sites within our target regions)
+                            (Variants data from 2,638 pruned samples)
+                        </p>
+                        
+                        <p>
+                            <a href="http://alsdb.org/download/site_coverage_3_10_20_201_v2.csv.gz">
+                                <i class="fa fa-file"></i>
+                                site_coverage_3_10_20_201_v2.csv.gz
+                            </a> 
+                            (Sequencing per base coverage data from 2,800 samples)
                         </p>
 
-                        <small>v1 data was last updated on <em>Feb 27, 2015</em>.</small>
-<!--
+                        <small>v2 data was last updated on <em>Oct 13, 2016</em>.</small>
+
                         <hr>
 
                         <p>
@@ -62,6 +70,7 @@
                                 <i class="fa fa-file"></i>
                                 snps_indels_v1.txt.gz
                             </a>
+                            (Variants data from 1,424 samples)
                         </p>
 
                         <p>
@@ -69,9 +78,10 @@
                                 <i class="fa fa-file"></i>
                                 coverage.all_sites_v1.txt.gz
                             </a>
+                            (Sequencing per base coverage data from 1,424 samples)
                         </p>
 
-                        <small>v1 data was last updated on <em>Feb 27, 2015</em>.</small>-->
+                        <small>v1 data was last updated on <em>Feb 27, 2015</em>.</small>
                     </div>
 
                     <div class="col-xs-6 col-md-3">
@@ -79,21 +89,27 @@
                             <h5>Latest News</h5>
 
                             <ul class="list-unstyled">
-<!--                                <li>Released v2 data
-                                    <small class="gray">(Sept 23, 2015)</small>
+                                <li>Released v2 data
+                                    <small class="gray">(Oct 13, 2016)</small>
                                 </li>
                                 <ul>
                                     <li>
-                                        <small>combined 1,425 HA patients data</small>
+                                        <small>combined 1,425 HA samples data</small>
                                     </li>
-                                </ul>-->
+                                    <li>
+                                        <small>removed related and genetic outlier samples</small>
+                                    </li>
+                                    <li>
+                                        <small>data browser is based on 2,638 pruned samples data</small>
+                                    </li>
+                                </ul>
 
                                 <li>Released v1 data
                                     <small class="gray">(Feb 27, 2015)</small>
                                 </li>
                                 <ul>
                                     <li>
-                                        <small>1,424 IGM patients data</small>
+                                        <small>1,424 IGM samples data</small>
                                     </li>
                                 </ul>
                             </ul>

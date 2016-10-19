@@ -27,9 +27,6 @@ public class Variant {
     private int qcFailedSamples;
     private float maf;
     private float hweP;
-    private float rivsAll01MafPercentile;
-    private float rivsOeratioPercentile;
-    private String rivsEdgecase;
     private float exacGlobalMaf;
     private float exacAfrMaf;
     private float exacAmrMaf;
@@ -52,9 +49,9 @@ public class Variant {
             + "Variant,"
             + "Variant_type,"
             + "Is_minor_ref,"
-            + "Homoz,"
+            + "Major_hom,"
             + "Heteroz,"
-            + "Homoz_ref,"
+            + "Minor_hom,"
             + "QC_failed_samples,"
             + "Case_maf,"
             + "Case_HWE_p,"
@@ -69,9 +66,6 @@ public class Variant {
             + "EVS_EA_maf,"
             + "EVS_AA_maf,"
             + "EVS_all_maf,"
-            + "RVIS_percentile,"
-            + "RVIS_Edgecase,"
-            + "OEratio_percentile,"
             + "HGNC,"
             + "Transcript,"
             + "Canonical,"
@@ -116,10 +110,6 @@ public class Variant {
         maf = rset.getFloat("case_maf");
         hweP = rset.getFloat("case_hwe_p");
 
-        rivsAll01MafPercentile = FormatManager.getFloat(rset.getObject("rvis_all_01maf_percentile"));
-        rivsOeratioPercentile = FormatManager.getFloat(rset.getObject("rvis_oeratio_percentile"));
-        rivsEdgecase = FormatManager.getString(rset.getString("rvis_edgecase"));
-
         exacGlobalMaf = FormatManager.getFloat(rset.getObject("exac_global_maf"));
         exacAfrMaf = FormatManager.getFloat(rset.getObject("exac_afr_maf"));
         exacAmrMaf = FormatManager.getFloat(rset.getObject("exac_amr_maf"));
@@ -140,7 +130,7 @@ public class Variant {
 
     public void initAnnotationMap() throws Exception {
         String sql = "SELECT * "
-                + "FROM annotation "
+                + "FROM annotation_v2 "
                 + "WHERE variant_id = " + id + " "
                 + "ORDER BY igm_rank,"
                 // when igm_rank is the same, the data sort by "Canonical" = "YES"
@@ -258,10 +248,6 @@ public class Variant {
             sb.append(FormatManager.getString(evsEurMaf)).append(",");
             sb.append(FormatManager.getString(evsAfrMaf)).append(",");
             sb.append(FormatManager.getString(evsAllMaf)).append(",");
-
-            sb.append(FormatManager.format(rivsAll01MafPercentile)).append(",");
-            sb.append(rivsEdgecase).append(",");
-            sb.append(FormatManager.format(rivsOeratioPercentile)).append(",");
 
             sb.append(annotation.getGeneName()).append(",");
             sb.append(annotation.getTranscript()).append(",");

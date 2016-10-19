@@ -1,3 +1,4 @@
+<%@page import="util.FormatManager"%>
 <%@page import="object.Variant"%>
 <%@page import="java.util.ArrayList"%>
 
@@ -121,7 +122,7 @@
             <th class="text-center">
                 <a href="http://cadd.gs.washington.edu/"
                    class="black" target="_blank" 
-                   data-toggle="tooltip" title="The Combined Annotation Dependent Depletion (CADD) score v1.0">
+                   data-toggle="tooltip" title="The Combined Annotation Dependent Depletion (CADD) score r0.3">
                     CADD Score
                 </a>
             </th>
@@ -161,7 +162,7 @@
                 <%=variant.getMaf()%>
             </td>
             <td>
-                <%=variant.getCscore()%>
+                <%=FormatManager.getString(variant.getCscore())%>
             </td>
         </tr>
 
