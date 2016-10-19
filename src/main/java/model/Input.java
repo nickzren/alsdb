@@ -1,5 +1,6 @@
 package model;
 
+import java.sql.PreparedStatement;
 import object.Region;
 import util.DBManager;
 import util.FormatManager;
@@ -56,11 +57,11 @@ public class Input {
     }
 
     private static void initRegionListByGeneName(String geneName) throws Exception {
-        String sql = "SELECT * "
-                + "FROM gene_region "
-                + "WHERE gene_name='" + geneName + "'";
+        String sql = "SELECT * FROM gene_region WHERE gene_name=?";
 
-        ResultSet rset = DBManager.executeQuery(sql);
+        PreparedStatement stmt = DBManager.prepareStatement(sql);
+        stmt.setString(1, geneName);
+        ResultSet rset = stmt.executeQuery();
 
         if (rset.next()) {
             query = rset.getString("gene_name");
@@ -73,11 +74,11 @@ public class Input {
     }
 
     private static void initRvisByGene(String geneName) throws Exception {
-        String sql = "SELECT * "
-                + "FROM rvis "
-                + "WHERE gene_name='" + geneName + "'";
+        String sql = "SELECT * FROM rvis WHERE gene_name=?";
 
-        ResultSet rset = DBManager.executeQuery(sql);
+        PreparedStatement stmt = DBManager.prepareStatement(sql);
+        stmt.setString(1, geneName);
+        ResultSet rset = stmt.executeQuery();
 
         if (rset.next()) {
             float f = FormatManager.getFloat(rset.getObject("rvis_percent"));

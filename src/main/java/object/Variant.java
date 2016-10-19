@@ -1,5 +1,6 @@
 package object;
 
+import java.sql.PreparedStatement;
 import util.DBManager;
 import util.FormatManager;
 import java.sql.ResultSet;
@@ -131,12 +132,14 @@ public class Variant {
     public void initAnnotationMap() throws Exception {
         String sql = "SELECT * "
                 + "FROM annotation_v2 "
-                + "WHERE variant_id = " + id + " "
+                + "WHERE variant_id = ? "
                 + "ORDER BY igm_rank,"
                 // when igm_rank is the same, the data sort by "Canonical" = "YES"
                 + "case when canonical is null then 1 else 0 end,canonical;";
 
-        ResultSet rset = DBManager.executeQuery(sql);
+        PreparedStatement stmt = DBManager.prepareStatement(sql);
+        stmt.setInt(1, id);
+        ResultSet rset = stmt.executeQuery();
 
         while (rset.next()) {
             Annotation anno = new Annotation(rset);

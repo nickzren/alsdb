@@ -1,5 +1,6 @@
 package model;
 
+import java.sql.PreparedStatement;
 import object.Region;
 import object.Variant;
 import util.DBManager;
@@ -38,12 +39,14 @@ public class Output {
 
         String sql = "SELECT * "
                 + "FROM variant_v2 "
-                + "WHERE chr='" + tmp[0] + "' "
-                + "AND pos=" + tmp[1] + " "
-                + "AND ref='" + tmp[2] + "' "
-                + "AND allele='" + tmp[3] + "'";
+                + "WHERE chr= ? AND pos= ? AND ref= ? AND allele= ?";
 
-        ResultSet rset = DBManager.executeQuery(sql);
+        PreparedStatement stmt = DBManager.prepareStatement(sql);
+        stmt.setString(1, tmp[0]);
+        stmt.setInt(2, Integer.valueOf(tmp[1]));
+        stmt.setString(3, tmp[2]);
+        stmt.setString(4, tmp[3]);
+        ResultSet rset = stmt.executeQuery();
 
         if (rset.next()) {
             variant = new Variant(rset);
