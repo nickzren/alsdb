@@ -7,7 +7,6 @@ import java.sql.*;
 import java.util.Properties;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.apache.tomcat.jdbc.pool.PoolProperties;
-
 /**
  *
  * @author nick
@@ -75,9 +74,13 @@ public class DBManager {
 //            dbPassword = prop.getProperty("dbpassword");
 
             // local config
-             dbUrl = "jdbc:mysql://localhost:3306/alsdb";
-             dbUser = "test";
-             dbPassword = "test";
+             dbUrl = System.getProperty("DB_URL");//"jdbc:mysql://localhost:3306/alsdb";
+             dbUser = System.getProperty("DB_USER");//"test";
+             dbPassword = System.getProperty("DB_PASSWORD");//"test";
+
+             //dbUrl = "jdbc:mysql://alsdbcluster.cluster-ro-cyxscvzmumwf.us-east-2.rds.amazonaws.com:3306/alsdb";
+             //dbUser = "alsdb";
+             //dbPassword = "igm-alsdb";
         } catch (Exception e) {
             e.printStackTrace();
         }
