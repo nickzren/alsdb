@@ -64,23 +64,15 @@ public class DBManager {
 
     private static void initDataFromSystemConfig() {
         try {
-            // server config
-//            InputStream input = new FileInputStream(Data.SYSTEM_CONFIG);
-//            Properties prop = new Properties();
-//            prop.load(input);
-//
-//            dbUrl = prop.getProperty("dburl");
-//            dbUser = prop.getProperty("dbuser");
-//            dbPassword = prop.getProperty("dbpassword");
+            // server config from enviroment
+             dbUrl = System.getProperty("DB_URL");
+             dbUser = System.getProperty("DB_USER");
+             dbPassword = System.getProperty("DB_PASSWORD");
 
-            // local config
-             dbUrl = System.getProperty("DB_URL");//"jdbc:mysql://localhost:3306/alsdb";
-             dbUser = System.getProperty("DB_USER");//"test";
-             dbPassword = System.getProperty("DB_PASSWORD");//"test";
-
-             //dbUrl = "jdbc:mysql://alsdbcluster.cluster-ro-cyxscvzmumwf.us-east-2.rds.amazonaws.com:3306/alsdb";
-             //dbUser = "alsdb";
-             //dbPassword = "igm-alsdb";
+             // local config
+//             dbUrl = "jdbc:mysql://localhost:3306/alsdb";
+//             dbUser = "test";
+//             dbPassword = "test";
         } catch (Exception e) {
             e.printStackTrace();
         }
