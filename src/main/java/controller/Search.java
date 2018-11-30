@@ -46,7 +46,6 @@ public class Search extends HttpServlet {
         request.setAttribute("table", Input.table);
         request.setAttribute("variant", Output.variant);
         request.setAttribute("variantList", Output.variantList);
-        request.setAttribute("rvisPercentile", Output.rvisPercentile);
         request.setAttribute("errorMsg", Output.errorMsg);
         request.setAttribute("url", Download.url);
     }

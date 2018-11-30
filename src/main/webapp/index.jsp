@@ -48,7 +48,7 @@
                             <form class="form-search" action="Search">
                                 <div class="input-group">
                                     <input name="query" class="form-control input-lg tt-input"
-                                           type="text" placeholder="Search for a gene or region or variant" >
+                                           type="text" placeholder="Search for a region or variant" >
                                     <div class="input-group-btn">
                                         <button class="btn btn-default input-lg tt-input" 
                                                 type="submit">
@@ -61,7 +61,6 @@
 
                     <p class="text-muted" style="margin-left: 5px">
                         Examples - 
-                        Gene: <a href="Search?query=TBK1">TBK1</a>,
                         Region: <a href="Search?query=21:33032075-33040899">21:33032075-33040899</a>, 
                         Variant: <a href="Search?query=14-21162090-G-A">14-21162090-G-A</a>
                     </p>

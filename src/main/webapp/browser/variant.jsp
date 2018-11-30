@@ -1,5 +1,4 @@
 <%@page import="util.FormatManager"%>
-<%@page import="object.Annotation"%>
 <%@page import="object.Variant"%>
 <%@page import="java.util.ArrayList"%>
 
@@ -33,11 +32,6 @@
             <span class="label label-default" data-toggle="tooltip" 
                   title="Minor Allele Frequency of variant">
                 MAF: <%=variant.getMaf()%>
-            </span> 
-            &nbsp;
-            <span class="label label-default" data-toggle="tooltip" 
-                  title="The Combined Annotation Dependent Depletion (CADD) score">
-                CADD Score: <%=FormatManager.getString(variant.getCscore())%>
             </span>
             <%}%>
         </h4>
@@ -112,44 +106,7 @@
     </thead>
 
     <tbody>
-        <%
-            for (ArrayList<Annotation> list : variant.getGeneAnnotationMap().values()) {
-                for (Annotation annotation : list) {
-        %>
-
-        <tr class="text-center">
-            <td>
-                <a href="Search?query=<%=annotation.getGeneName()%>">
-                    <%=annotation.getGeneName()%>
-                </a>
-            </td>
-            <td>
-                <%=annotation.getTranscript()%>
-            </td>
-            <td>
-                <%=annotation.getCodonChange()%>
-            </td>
-            <td>
-                <%=annotation.getAaChange()%>
-            </td>
-            <td>
-                <%=annotation.getCcds()%>
-            </td>
-            <td data-rank="<%=annotation.getIgmRank()%>">
-                <%=annotation.getConsequence()%>
-            </td>
-            <td>
-                <%=annotation.getPolyphenHumvar()%>
-            </td>
-            <td>
-                <%=annotation.getSift()%>
-            </td>
-        </tr>
-
-        <%
-                }
-            }
-        %>
+       
     </tbody>
 </table>
 
