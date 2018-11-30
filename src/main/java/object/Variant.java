@@ -33,7 +33,7 @@ public class Variant {
         chr = rset.getString("chr");
         pos = rset.getInt("pos");
         ref = rset.getString("ref");
-        alt = rset.getString("allele");
+        alt = rset.getString("alt");
         isMinorRef = rset.getBoolean("is_minor_ref");
         major_hom = rset.getInt("major_hom");
         het = rset.getInt("het");
@@ -73,7 +73,23 @@ public class Variant {
     public int getSampleCount() {
         return minor_hom + het + major_hom;
     }
+    
+    public boolean getIsMinorRef() {
+        return isMinorRef;
+    }
 
+    public int getMajorHom() {
+        return major_hom;
+    }
+    
+    public int getHet() {
+        return het;
+    }
+    
+    public int getMinorHom() {
+        return minor_hom;
+    }
+    
     public float getMaf() {
         return maf;
     }

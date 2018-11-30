@@ -72,6 +72,30 @@
                     Sample Count
                 </a>
             </th>
+            <th class="text-center">
+                <a class="black" data-toggle="tooltip" 
+                   title="Is reference allele is minor based on allele frequency large then 0.5">
+                    Is Minor Ref
+                </a>
+            </th>
+            <th class="text-center">
+                <a class="black" data-toggle="tooltip" 
+                   title="Major hom count">
+                    Major Hom
+                </a>
+            </th>
+            <th class="text-center">
+                <a class="black" data-toggle="tooltip" 
+                   title="Heteroz count">
+                    Heteroz
+                </a>
+            </th>
+            <th class="text-center">
+                <a class="black" data-toggle="tooltip" 
+                   title="Minor hom count">
+                    Minor Hom
+                </a>
+            </th>
             <th class="text-center" style="cursor: pointer;">
                 <a class="black" data-toggle="tooltip"
                    title="Minor Allele Frequency of variant in the case population">
@@ -99,6 +123,18 @@
                 <%=variant.getSampleCount()%>
             </td>
             <td>
+                <%=variant.getIsMinorRef()%>
+            </td>
+            <td>
+                <%=variant.getMajorHom()%>
+            </td>
+            <td>
+                <%=variant.getHet()%>
+            </td>
+            <td>
+                <%=variant.getMinorHom()%>
+            </td>
+            <td>
                 <%=variant.getMaf()%>
             </td>
         </tr>
@@ -118,10 +154,6 @@
             headerTemplate: '{content} {icon}',
             widgets: ["uitheme"],
             headers: {
-                1: {sorter: false},
-                2: {sorter: false},
-                3: {sorter: false},
-                4: {sorter: false}
             }
         });
 

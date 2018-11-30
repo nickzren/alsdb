@@ -38,7 +38,7 @@
                     <h2>Data Browser 
                         <small>
                             <a class="white" href="download.jsp">
-                                <span class="label label-default">v2</span>
+                                <span class="label label-default">v3</span>
                             </a>
                         </small>
                     </h2>
