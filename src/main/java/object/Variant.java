@@ -23,6 +23,8 @@ public class Variant {
             + "Pos,"
             + "Ref,"
             + "Alt,"
+            + "Allele Count,"
+            + "Sample Count,"
             + "Is_minor_ref,"
             + "Major_hom,"
             + "Heteroz,"
@@ -102,6 +104,8 @@ public class Variant {
         sb.append(pos).append(",");
         sb.append(ref).append(",");
         sb.append(alt).append(",");
+        sb.append(getAlleleCount()).append(",");
+        sb.append(getSampleCount()).append(",");
         sb.append(isMinorRef).append(",");
         sb.append(major_hom).append(",");
         sb.append(het).append(",");
