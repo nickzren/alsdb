@@ -45,85 +45,33 @@
 } else {
 %>
 
-<table id="variant" class="tablesorter">
-    <thead>
-        <tr>
-            <th class="text-center">
-                <a class="black" data-toggle="tooltip" 
-                   title="HGNC Gene name">
-                    Gene
-                </a>
-            </th>
-            <th class="text-center">
-                <a class="black" data-toggle="tooltip" 
-                   title="Ensembl Transcript ID">
-                    Transcript
-                </a>
-            </th>
-            <th class="text-center">
-                <a class="black" data-toggle="tooltip" 
-                   title="Corresponding codon change">
-                    Codon Change
-                </a>
-            </th>
-            <th class="text-center">
-                <a class="black" data-toggle="tooltip" 
-                   title="Amino-acid change">
-                    AA Change
-                </a>
-            </th>
-            <th class="text-center">
-                <a class="black" data-toggle="tooltip" 
-                   title="Consensus Coding Sequence (CCDS) ID">
-                    CCDS
-                </a>
-            </th>
-            <th class="text-center" style="cursor: pointer">
-                <a class="black" data-toggle="tooltip" 
-                   title="Predicted variant effect">
-                    Consequence
-                </a>
-            </th>
-            <th class="text-center">
-                <a class="black" data-toggle="tooltip" 
-                   title=" The predicted PolyPhen-2 HumVar score through Ve!P">
-                    PolyPhen-2 HumVar
-                </a>
-            </th>
-            <th class="text-center">
-                <a class="black" data-toggle="tooltip" 
-                   title="The predicted SIFT score through Ve!P">SIFT
-                </a>
-            </th>
-        </tr> 
-    </thead>
+<br>
 
-    <tbody>
-       
-    </tbody>
-</table>
+<div style="max-width: 900px; margin: 0 auto;">
+    <variant-request refgenome="hg19" query="<%=variant.getIdStr()%>"></variant-request>
+    <variant-details></variant-details>
+    <region-browser></region-browser>
+    <gwas-results></gwas-results>
+    <structural-browser></structural-browser>
+    <transcripts-results></transcripts-results>
+    <ncbi-clinvar></ncbi-clinvar>
+    <uniprot-variants></uniprot-variants>
 
-<script type="text/javascript">
-    $(function () {
-        $('#variant').tablesorter({
-            theme: "bootstrap",
-            headerTemplate: '{content} {icon}',
-            widgets: ["uitheme"],
-            headers: {
-                0: {sorter: false},
-                1: {sorter: false},
-                2: {sorter: false},
-                3: {sorter: false},
-                4: {sorter: false},
-                6: {sorter: false},
-                7: {sorter: false}
-            }
-        });
+    <frequencies-dbs></frequencies-dbs>
+    <cancer-dbs></cancer-dbs>
+    <prediction-scores></prediction-scores>
 
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>      
+    <genes-results></genes-results>
+</div>
 
 <%
     }
 %>
+
+<script>
+    var varsomeConfig = {
+        api_url: 'https://api.varsome.com',
+        static_token: 'fQ0dFl#wgsH4xuIZouU9*kMHZirF*SkY#4$hT?xJ'
+    }
+</script>
+<script src="https://assets.varsome.com/static/components/components-bundle.js"></script>

@@ -62,12 +62,9 @@
                     <p class="text-muted" style="margin-left: 5px">
                         Examples - 
                         Region: <a href="Search?query=21:33032075-33040899">21:33032075-33040899</a>, 
-                        Variant: <a href="Search?query=14-21162090-G-A">14-21162090-G-A</a>
+                        Variant: <a href="Search?query=14-20215709-A-T">14-20215709-A-T</a>
                     </p>
-
                 </div>
-
-                <br/>
 
                 <%@include file="browser/result.jsp" %>  
             </div>

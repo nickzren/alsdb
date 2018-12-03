@@ -26,7 +26,7 @@
                     <div class="col-xs-6 col-md-9">
                         <p class="lead">
                             The following flat files contain the full catalogue of SNVs, indels 
-                            and coverage data for 2,800 patients recruited and sequenced for 
+                            and coverage data for 3,317 patients recruited and sequenced for 
                             their Amyotrophic Lateral Sclerosis (ALS) diagnosis.
                         </p>
 
@@ -37,6 +37,32 @@
                         </u>
                         </p>
 
+                        <p>
+                            <a href="">
+                                <i class="fa fa-file"></i>
+                                all_als_samples_snps_indels_v3.csv.gz
+                            </a> 
+                            (Variants data from 3,317 ALS samples)
+                        </p>
+                        
+                        <p>
+                            <a href="">
+                                <i class="fa fa-file"></i>
+                                als_samples_CAUCASIAN_snps_indels_v3.csv.gz
+                            </a> 
+                            (Variants data from 3,093 ALS cases and 8,186 controls)
+                        </p>
+                        
+                        <p>
+                            <a href="">
+                                <i class="fa fa-file"></i>
+                                als_samples_allEthnicities_snps_indels_v3.csv.gz
+                            </a> 
+                            (Variants data from 3,239 ALS cases and 11,808 controls)
+                        </p>
+                        
+                        <hr>
+                        
                         <p>
                             <a href="http://alsdb.org/download/all_samples_snps_indels_v2.tsv.gz">
                                 <i class="fa fa-file"></i>
@@ -89,6 +115,15 @@
                             <h5>Latest News</h5>
 
                             <ul class="list-unstyled">
+                                <li>Released v3 data
+                                    <small class="gray">(Dec 03, 2018)</small>
+                                </li>
+                                <ul>
+                                    <li>
+                                        <small>3,317 ALS samples data</small>
+                                    </li>
+                                </ul>
+                                
                                 <li>Released v2 data
                                     <small class="gray">(Oct 19, 2016)</small>
                                 </li>
