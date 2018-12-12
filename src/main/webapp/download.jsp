@@ -48,7 +48,7 @@
                         <p>
                             <a href="">
                                 <i class="fa fa-file"></i>
-                                als_samples_CAUCASIAN_snps_indels_v3.csv.gz
+                                als_samples_caucasian_snps_indels_v3.csv.gz
                             </a> 
                             (Variants data from 3,093 ALS cases and 8,186 controls)
                         </p>
@@ -56,7 +56,7 @@
                         <p>
                             <a href="">
                                 <i class="fa fa-file"></i>
-                                als_samples_allEthnicities_snps_indels_v3.csv.gz
+                                als_samples_all_ethnicities_snps_indels_v3.csv.gz
                             </a> 
                             (Variants data from 3,239 ALS cases and 11,808 controls)
                         </p>
