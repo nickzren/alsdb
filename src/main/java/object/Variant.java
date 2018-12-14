@@ -12,11 +12,10 @@ public class Variant {
     private int pos;
     private String ref;
     private String alt;
-    private boolean isMinorRef;
-    private int major_hom;
-    private int het;
-    private int minor_hom;
-    private float maf;
+    private int homCount;
+    private int hetCount;
+    private int refCount;
+    private float af;
 
     public static final String title
             = "Chr,"
@@ -25,22 +24,20 @@ public class Variant {
             + "Alt,"
             + "Allele Count,"
             + "Sample Count,"
-            + "Is_minor_ref,"
-            + "Major_hom,"
-            + "Heteroz,"
-            + "Minor_hom,"
-            + "MAF";
+            + "Hom Count,"
+            + "Heteroz Count,"
+            + "Ref Count,"
+            + "AF";
 
     public Variant(ResultSet rset) throws Exception {
         chr = rset.getString("chr");
         pos = rset.getInt("pos");
         ref = rset.getString("ref");
         alt = rset.getString("alt");
-        isMinorRef = rset.getBoolean("is_minor_ref");
-        major_hom = rset.getInt("major_hom");
-        het = rset.getInt("het");
-        minor_hom = rset.getInt("minor_hom");
-        maf = rset.getFloat("maf");
+        homCount = rset.getInt("hom_count");
+        hetCount = rset.getInt("het_count");
+        refCount = rset.getInt("ref_count");
+        af = rset.getFloat("af");
     }
 
     public String getIdStr() {
@@ -51,49 +48,40 @@ public class Variant {
         return chr;
     }
 
-    public int getPosition() {
+    public int getPos() {
         return pos;
-
     }
 
     public String getRef() {
         return ref;
     }
 
-    public String getAllele() {
+    public String getAlt() {
         return alt;
     }
 
     public int getAlleleCount() {
-        if (isMinorRef) {
-            return 2 * major_hom + het;
-        } else {
-            return 2 * minor_hom + het;
-        }
+        return 2 * homCount + hetCount;
     }
 
     public int getSampleCount() {
-        return minor_hom + het + major_hom;
+        return refCount + hetCount + homCount;
     }
     
-    public boolean getIsMinorRef() {
-        return isMinorRef;
-    }
-
-    public int getMajorHom() {
-        return major_hom;
+    public int getHomCount() {
+        return homCount;
     }
     
-    public int getHet() {
-        return het;
+    public int getHetCount() {
+        return hetCount;
     }
     
-    public int getMinorHom() {
-        return minor_hom;
+    public int getRefCount() {
+        return refCount;
     }
     
-    public float getMaf() {
-        return maf;
+    public float getAF() {
+        return af;
     }
 
     @Override
@@ -106,11 +94,10 @@ public class Variant {
         sb.append(alt).append(",");
         sb.append(getAlleleCount()).append(",");
         sb.append(getSampleCount()).append(",");
-        sb.append(isMinorRef).append(",");
-        sb.append(major_hom).append(",");
-        sb.append(het).append(",");
-        sb.append(minor_hom).append(",");
-        sb.append(maf).append("\n");
+        sb.append(homCount).append(",");
+        sb.append(hetCount).append(",");
+        sb.append(refCount).append(",");
+        sb.append(af).append("\n");
 
         return sb.toString();
     }

@@ -23,8 +23,8 @@
             </span>
             &nbsp;
             <span class="label label-default" data-toggle="tooltip" 
-                  title="Minor Allele Frequency of variant">
-                MAF: <%=variant.getMaf()%>
+                  title="Allele Frequency of variant">
+                AF: <%=variant.getAF()%>
             </span>
             <%}%>
         </h4>

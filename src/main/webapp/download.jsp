@@ -38,25 +38,25 @@
                         </p>
 
                         <p>
-                            <a href="">
+                            <a href="http://alsdb.org/download/als_all_samples_snps_indels_v3.csv.gz">
                                 <i class="fa fa-file"></i>
-                                all_als_samples_snps_indels_v3.csv.gz
+                                als_all_samples_snps_indels_v3.csv.gz
                             </a> 
                             (Variants data from 3,317 ALS samples)
                         </p>
                         
                         <p>
-                            <a href="">
+                            <a href="http://alsdb.org/download/als_caucasian_samples_snps_indels_v3.csv.gz">
                                 <i class="fa fa-file"></i>
-                                als_samples_caucasian_snps_indels_v3.csv.gz
+                                als_caucasian_samples_snps_indels_v3.csv.gz
                             </a> 
                             (Variants data from 3,093 ALS cases and 8,186 controls)
                         </p>
                         
                         <p>
-                            <a href="">
+                            <a href="http://alsdb.org/download/als_all_ethnicities_samples_snps_indels_v3.csv.gz">
                                 <i class="fa fa-file"></i>
-                                als_samples_all_ethnicities_snps_indels_v3.csv.gz
+                                als_all_ethnicities_samples_snps_indels_v3.csv.gz
                             </a> 
                             (Variants data from 3,239 ALS cases and 11,808 controls)
                         </p>

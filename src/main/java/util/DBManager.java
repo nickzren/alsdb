@@ -65,14 +65,14 @@ public class DBManager {
     private static void initDataFromSystemConfig() {
         try {
             // server config from enviroment
-//             dbUrl = System.getProperty("DB_URL");
-//             dbUser = System.getProperty("DB_USER");
-//             dbPassword = System.getProperty("DB_PASSWORD");
+            dbUrl = System.getProperty("DB_URL");
+            dbUser = System.getProperty("DB_USER");
+            dbPassword = System.getProperty("DB_PASSWORD");
 
-             // local config
-             dbUrl = "jdbc:mysql://localhost:3306/alsdb";
-             dbUser = "test";
-             dbPassword = "test";
+            // local config
+//          dbUrl = "jdbc:mysql://localhost:3306/alsdb";
+//          dbUser = "test";
+//          dbPassword = "test";
         } catch (Exception e) {
             e.printStackTrace();
         }

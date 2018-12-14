@@ -74,32 +74,26 @@
             </th>
             <th class="text-center">
                 <a class="black" data-toggle="tooltip" 
-                   title="Is reference allele is minor based on allele frequency large then 0.5">
-                    Is Minor Ref
+                   title="Hom sample count">
+                    Hom Count
                 </a>
             </th>
             <th class="text-center">
                 <a class="black" data-toggle="tooltip" 
-                   title="Major hom count">
-                    Major Hom
+                   title="Heteroz sample count">
+                    Heteroz Count
                 </a>
             </th>
             <th class="text-center">
                 <a class="black" data-toggle="tooltip" 
-                   title="Heteroz count">
-                    Heteroz
-                </a>
-            </th>
-            <th class="text-center">
-                <a class="black" data-toggle="tooltip" 
-                   title="Minor hom count">
-                    Minor Hom
+                   title="Hom Ref sample count">
+                    Hom Ref Count
                 </a>
             </th>
             <th class="text-center" style="cursor: pointer;">
                 <a class="black" data-toggle="tooltip"
-                   title="Minor Allele Frequency of variant in the case population">
-                    MAF
+                   title="Allele Frequency of variant in the population">
+                    AF
                 </a>
             </th>
         </tr> 
@@ -123,19 +117,16 @@
                 <%=variant.getSampleCount()%>
             </td>
             <td>
-                <%=variant.getIsMinorRef()%>
+                <%=variant.getHomCount()%>
             </td>
             <td>
-                <%=variant.getMajorHom()%>
+                <%=variant.getHetCount()%>
             </td>
             <td>
-                <%=variant.getHet()%>
+                <%=variant.getRefCount()%>
             </td>
             <td>
-                <%=variant.getMinorHom()%>
-            </td>
-            <td>
-                <%=variant.getMaf()%>
+                <%=variant.getAF()%>
             </td>
         </tr>
 
