@@ -61,6 +61,8 @@
                             (Variants data from 3,239 ALS cases and 11,808 controls)
                         </p>
                         
+                        <small>v3 data was last updated on <em>Dec 03, 2018</em>.</small>
+                        
                         <hr>
                         
                         <p>
