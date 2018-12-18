@@ -70,12 +70,6 @@
                     percentage of 2,800 sequenced patients with ALS that had at 
                     least 3x, 10x, 20x and 201x read-depth coverage at the site.
                 </p>
-                
-                <br/>
-                
-                <h4><i class="fa fa-users"></i> Website team</h4>
-                
-                <p>Nick Ren, Joshua Bridgers, Raghavendra Padmanabhan, Slavé Petrovski</p>
             </div>
         </div>
 

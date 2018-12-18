@@ -15,7 +15,6 @@ public class Output {
 
     public static ArrayList<Variant> variantList = new ArrayList<Variant>();
     public static Variant variant;
-    public static String rvisPercentile;
     public static String errorMsg;
 
     public static void init() throws Exception {
@@ -38,8 +37,8 @@ public class Output {
         String[] tmp = Input.idStr.split("-");
 
         String sql = "SELECT * "
-                + "FROM variant_v2 "
-                + "WHERE chr= ? AND pos= ? AND ref= ? AND allele= ?";
+                + "FROM variant_v3 "
+                + "WHERE chr= ? AND pos= ? AND ref= ? AND alt= ?";
 
         PreparedStatement stmt = DBManager.prepareStatement(sql);
         stmt.setString(1, tmp[0]);
@@ -51,16 +50,10 @@ public class Output {
         if (rset.next()) {
             variant = new Variant(rset);
         }
-
-        if (variant != null) {
-            variant.initAnnotationMap();
-        }
     }
 
     public static void initVariantList() throws Exception {
-        String sql = "SELECT * "
-                + "FROM variant_v2 "
-                + "WHERE ";
+        String sql = "SELECT * FROM variant_v3 WHERE ";
 
         sql = addRegionSql(sql);
 
@@ -72,10 +65,6 @@ public class Output {
             }
 
             rset.close();
-
-            for (Variant var : variantList) {
-                var.initAnnotationMap();
-            }
         }
     }
 

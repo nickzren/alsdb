@@ -20,9 +20,7 @@ public class Download {
 
     public static void generateFile() throws Exception {
         if (!Output.variantList.isEmpty()) { // TRUE - no results from search query
-            String folderPath = rootPath + File.separator;
-
-            folderPath += Input.query.contains(":") ? "region" : "gene";
+            String folderPath = rootPath + File.separator + "region";
 
             File folder = new File(folderPath);
 

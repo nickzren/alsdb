@@ -7,35 +7,18 @@
     ArrayList<Variant> variantList = (ArrayList<Variant>) request.getAttribute("variantList");
     String errorMsg = (String) request.getAttribute("errorMsg");
     String url = (String) request.getAttribute("url");
-
-    String label;
-    if (query.contains(":")) {
-        label = "Region: " + query;
-    } else {
-        label = "Gene: " + query;
-    }
 %>
 
 <div class="row">
     <div class="col-md-10">
         <h4>
-            <mark><%=label%></mark>
+            <mark><%="Region: " + query%></mark>
                 <%if (!variantList.isEmpty()) {%>            
             <span class="label label-default" data-toggle="tooltip" 
-                  title="Total tally of variants linked to this gene/region">
+                  title="Total tally of variants linked to this region">
                 Variant Count: <%=variantList.size()%>
             </span>
-            <%if (!query.contains(":")) // gene
-                {%>
-            &nbsp;
-            <span class="label label-default" data-toggle="tooltip" 
-                  title="Genic intolerance percentile score for gene">
-                <a class="white" href="http://chgv.org/GenicIntolerance/" target="_blank">
-                    RVIS Percentile</a>: 
-                    <%=request.getAttribute("rvisPercentile")%>
-            </span>
-            <%}
-                }%>
+                <%}%>
         </h4>
     </div>
 
@@ -78,30 +61,6 @@
             </th> 
             <th class="text-center">
                 <a class="black" data-toggle="tooltip" 
-                   title="HGNC Gene name">
-                    Gene
-                </a>
-            </th> 
-            <th class="text-center">
-                <a class="black" data-toggle="tooltip" 
-                   title="Ensembl Transcript ID">
-                    Transcript
-                </a>
-            </th> 
-            <th class="text-center">
-                <a class="black" data-toggle="tooltip" 
-                   title="Amino-acid change">
-                    AA Change
-                </a>
-            </th> 
-            <th class="text-center sorter-rank" style="cursor: pointer;">
-                <a class="black" data-toggle="tooltip" 
-                   title="Predicted variant effect">
-                    Consequence
-                </a>
-            </th> 
-            <th class="text-center">
-                <a class="black" data-toggle="tooltip" 
                    title="Number of observed alleles in the case population">
                     Allele Count
                 </a>
@@ -113,17 +72,28 @@
                     Sample Count
                 </a>
             </th>
-            <th class="text-center" style="cursor: pointer;">
-                <a class="black" data-toggle="tooltip"
-                   title="Minor Allele Frequency of variant in the case population">
-                    MAF
+            <th class="text-center">
+                <a class="black" data-toggle="tooltip" 
+                   title="Hom sample count">
+                    Hom Count
                 </a>
             </th>
             <th class="text-center">
-                <a href="http://cadd.gs.washington.edu/"
-                   class="black" target="_blank" 
-                   data-toggle="tooltip" title="The Combined Annotation Dependent Depletion (CADD) score r0.3">
-                    CADD Score
+                <a class="black" data-toggle="tooltip" 
+                   title="Heteroz sample count">
+                    Heteroz Count
+                </a>
+            </th>
+            <th class="text-center">
+                <a class="black" data-toggle="tooltip" 
+                   title="Hom Ref sample count">
+                    Hom Ref Count
+                </a>
+            </th>
+            <th class="text-center" style="cursor: pointer;">
+                <a class="black" data-toggle="tooltip"
+                   title="Allele Frequency of variant in the population">
+                    AF
                 </a>
             </th>
         </tr> 
@@ -141,28 +111,22 @@
                 </a>
             </td>
             <td>
-                <%=variant.getAnnotation().getGeneName()%>
-            </td>
-            <td>
-                <%=variant.getAnnotation().getTranscript()%>
-            </td>
-            <td>
-                <%=variant.getAnnotation().getAaChange()%>
-            </td>
-            <td data-rank="<%=variant.getAnnotation().getIgmRank()%>">
-                <%=variant.getAnnotation().getConsequence()%>
-            </td>
-            <td>
                 <%=variant.getAlleleCount()%>
             </td>
             <td>
                 <%=variant.getSampleCount()%>
             </td>
             <td>
-                <%=variant.getMaf()%>
+                <%=variant.getHomCount()%>
             </td>
             <td>
-                <%=FormatManager.getString(variant.getCscore())%>
+                <%=variant.getHetCount()%>
+            </td>
+            <td>
+                <%=variant.getRefCount()%>
+            </td>
+            <td>
+                <%=variant.getAF()%>
             </td>
         </tr>
 
@@ -181,12 +145,6 @@
             headerTemplate: '{content} {icon}',
             widgets: ["uitheme"],
             headers: {
-                1: {sorter: false},
-                2: {sorter: false},
-                3: {sorter: false},
-                5: {sorter: false},
-                6: {sorter: false},
-                8: {sorter: false}
             }
         });
 
