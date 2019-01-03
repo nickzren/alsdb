@@ -12,7 +12,7 @@
 <div class="row">
     <div class="col-md-10">
         <h4>
-            <mark><%="Region: " + query%></mark>
+            <mark><%="Query: " + query%></mark>
                 <%if (!variantList.isEmpty()) {%>            
             <span class="label label-default" data-toggle="tooltip" 
                   title="Total tally of variants linked to this region">

@@ -9,7 +9,7 @@
 <div class="row">    
     <div class="col-md-10">
         <h4>
-            <mark>Variant: <%=request.getAttribute("query")%></mark>
+            <mark>Query: <%=request.getAttribute("query")%></mark>
                 <%if (variant != null) {%>
             <span class="label label-default" data-toggle="tooltip" 
                   title="Number of observed alleles in the case population">
