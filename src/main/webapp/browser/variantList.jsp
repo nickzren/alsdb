@@ -58,6 +58,12 @@
                    title="Chromsome - Position - Reference - Variant">
                     Variant
                 </a>
+            </th>
+            <th class="text-center" style="cursor: pointer;">
+                <a class="black" data-toggle="tooltip" 
+                   title="SnpEff annotated effect, Ensembl version GRCh37.73">
+                    Effect
+                </a>
             </th> 
             <th class="text-center">
                 <a class="black" data-toggle="tooltip" 
@@ -109,6 +115,9 @@
                 <a href="Search?query=<%=variant.getIdStr()%>">
                     <%=variant.getIdStr()%>
                 </a>
+            </td>
+            <td>
+                <%=variant.getEffect()%>
             </td>
             <td>
                 <%=variant.getAlleleCount()%>
