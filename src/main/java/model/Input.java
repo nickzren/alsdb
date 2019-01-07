@@ -1,8 +1,10 @@
 package model;
 
+import java.sql.ResultSet;
 import object.Region;
 import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
+import util.DBManager;
 
 /**
  *
@@ -27,6 +29,8 @@ public class Input {
             table = "variant";
         } else if (query.contains(":")) {
             initRegionListByStr(query);
+        } else {
+            initRegionListByGeneName(query);
         }
     }
 
@@ -45,5 +49,22 @@ public class Input {
         int end = Integer.valueOf(tmp[1]);
 
         return new Region(chr, start, end);
+    }
+    
+    private static void initRegionListByGeneName(String geneName) throws Exception {
+        String sql = "SELECT * "
+                + "FROM gene_region "
+                + "WHERE gene_name='" + geneName + "'";
+
+        ResultSet rset = DBManager.executeQuery(sql);
+
+        if (rset.next()) {
+            query = rset.getString("gene_name");
+            String regionStr = rset.getString("region");
+
+            initRegionListByStr(regionStr);
+        }
+
+        rset.close();
     }
 }

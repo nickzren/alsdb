@@ -12,7 +12,7 @@
 <div class="row">
     <div class="col-md-10">
         <h4>
-            <mark><%="Region: " + query%></mark>
+            <mark><%="Query: " + query%></mark>
                 <%if (!variantList.isEmpty()) {%>            
             <span class="label label-default" data-toggle="tooltip" 
                   title="Total tally of variants linked to this region">
@@ -57,6 +57,12 @@
                 <a class="black" data-toggle="tooltip" 
                    title="Chromsome - Position - Reference - Variant">
                     Variant
+                </a>
+            </th>
+            <th class="text-center" style="cursor: pointer;">
+                <a class="black" data-toggle="tooltip" 
+                   title="SnpEff annotated effect, Ensembl version GRCh37.73">
+                    Effect
                 </a>
             </th> 
             <th class="text-center">
@@ -109,6 +115,9 @@
                 <a href="Search?query=<%=variant.getIdStr()%>">
                     <%=variant.getIdStr()%>
                 </a>
+            </td>
+            <td>
+                <%=variant.getEffect()%>
             </td>
             <td>
                 <%=variant.getAlleleCount()%>

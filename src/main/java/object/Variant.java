@@ -12,6 +12,7 @@ public class Variant {
     private int pos;
     private String ref;
     private String alt;
+    private String effect;
     private int homCount;
     private int hetCount;
     private int refCount;
@@ -22,6 +23,7 @@ public class Variant {
             + "Pos,"
             + "Ref,"
             + "Alt,"
+            + "Effect,"
             + "Allele Count,"
             + "Sample Count,"
             + "Hom Count,"
@@ -34,6 +36,7 @@ public class Variant {
         pos = rset.getInt("pos");
         ref = rset.getString("ref");
         alt = rset.getString("alt");
+        effect = rset.getString("effect");
         homCount = rset.getInt("hom_count");
         hetCount = rset.getInt("het_count");
         refCount = rset.getInt("ref_count");
@@ -58,6 +61,10 @@ public class Variant {
 
     public String getAlt() {
         return alt;
+    }
+    
+    public String getEffect() {
+        return effect;
     }
 
     public int getAlleleCount() {

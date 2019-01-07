@@ -70,9 +70,9 @@ public class DBManager {
             dbPassword = System.getProperty("DB_PASSWORD");
 
             // local config
-//          dbUrl = "jdbc:mysql://localhost:3306/alsdb";
-//          dbUser = "test";
-//          dbPassword = "test";
+//            dbUrl = "jdbc:mysql://localhost:3306/alsdb";
+//            dbUser = "test";
+//            dbPassword = "test";
         } catch (Exception e) {
             e.printStackTrace();
         }
