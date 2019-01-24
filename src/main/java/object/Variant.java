@@ -99,6 +99,7 @@ public class Variant {
         sb.append(pos).append(",");
         sb.append(ref).append(",");
         sb.append(alt).append(",");
+        sb.append(effect).append(",");
         sb.append(getAlleleCount()).append(",");
         sb.append(getSampleCount()).append(",");
         sb.append(homCount).append(",");
