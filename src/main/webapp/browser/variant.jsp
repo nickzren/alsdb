@@ -47,7 +47,7 @@
 
 <br>
 
-<!--<div style="max-width: 900px; margin: 0 auto;">
+<div style="max-width: 900px; margin: 0 auto;">
     <variant-request refgenome="hg19" query="<%=variant.getIdStr()%>"></variant-request>
     <variant-details></variant-details>
     <region-browser></region-browser>
@@ -62,7 +62,7 @@
     <prediction-scores></prediction-scores>
 
     <genes-results></genes-results>
-</div>-->
+</div>
 
 <%
     }
