@@ -42,7 +42,7 @@
                                 <i class="fa fa-file"></i>
                                 als_all_samples_snps_indels_v3.csv.gz
                             </a> 
-                            (Variants data from 3,317 ALS samples)
+                            (Variants data from 3,317 ALS samples, combining both caucasian and diversified datasets)
                         </p>
                         
                         <p>
@@ -50,7 +50,7 @@
                                 <i class="fa fa-file"></i>
                                 als_caucasian_samples_snps_indels_v3.csv.gz
                             </a> 
-                            (Variants data from 3,093 ALS cases and 8,186 controls)
+                            (Variants data from 3,093 ALS cases and 8,186 controls of Caucasian ancestry)
                         </p>
                         
                         <p>
@@ -58,7 +58,15 @@
                                 <i class="fa fa-file"></i>
                                 als_all_ethnicities_samples_snps_indels_v3.csv.gz
                             </a> 
-                            (Variants data from 3,239 ALS cases and 11,808 controls)
+                            (Variants data from 3,239 ALS cases and 11,808 controls of diversified ancestries)
+                        </p>
+                        
+                        <p>
+                            <a href="http://alsdb.org/download/custom_capture_replication_cohort.csv.gz">
+                                <i class="fa fa-file"></i>
+                                custom_capture_replication_cohort.csv.gz
+                            </a> 
+                            (Variants data from 830 ALS cases and 1,858 controls sequenced for top 51 genes found by Cirulli et al.)
                         </p>
                         
                         <small>v3 data was last updated on <em>Dec 03, 2018</em>.</small>
