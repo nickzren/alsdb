@@ -30,6 +30,10 @@
                         <p>
                             Sorry, an error has occured, Requested page not found!
                         </p>
+                        
+                        <p>
+                            <%=request.getAttribute("error")%>
+                        </p>
                     </div>
                 </div>
             </div>
