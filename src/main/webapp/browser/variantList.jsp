@@ -114,6 +114,9 @@
             <td>
                 <a href="Search?query=<%=variant.getIdStr()%>">
                     <%=variant.getIdStr()%>
+                </a>&nbsp 
+                <a target="_blank" href="http://atavdb.org/Search?query=<%=variant.getIdStr()%>">
+                    <span class="label label-default">atavdb</span>
                 </a>
             </td>
             <td>

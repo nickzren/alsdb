@@ -26,6 +26,8 @@
                   title="Allele Frequency of variant">
                 AF: <%=variant.getAF()%>
             </span>
+            &nbsp;
+            <a class="btn btn-default" href="http://atavdb.org/Search?query=${query}" target="_blank">ATAVDB</a> 
             <%}%>
         </h4>
     </div>
@@ -42,36 +44,5 @@
 </div>
 
 <%
-} else {
-%>
-
-<br>
-
-<div style="max-width: 900px; margin: 0 auto;">
-    <variant-request refgenome="hg19" query="<%=variant.getIdStr()%>"></variant-request>
-    <variant-details></variant-details>
-    <region-browser></region-browser>
-    <gwas-results></gwas-results>
-    <structural-browser></structural-browser>
-    <transcripts-results></transcripts-results>
-    <ncbi-clinvar></ncbi-clinvar>
-    <uniprot-variants></uniprot-variants>
-
-    <frequencies-dbs></frequencies-dbs>
-    <cancer-dbs></cancer-dbs>
-    <prediction-scores></prediction-scores>
-
-    <genes-results></genes-results>
-</div>
-
-<%
     }
 %>
-
-<script>
-    var varsomeConfig = {
-        api_url: 'https://api.varsome.com',
-        static_token: 'fQ0dFl#wgsH4xuIZouU9*kMHZirF*SkY#4$hT?xJ'
-    }
-</script>
-<script src="https://assets.varsome.com/static/components/components-bundle.js"></script>
