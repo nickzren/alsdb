@@ -12,7 +12,7 @@
                 <li><a href="./">Home</a></li>
                 <li><a href="about">About</a></li>
                 <li><a href="terms">Terms</a></li>
-                <li><a href="download">Download</a></li>
+                <li><a href="downloads">Download</a></li>
                 <li><a href="contact">Contact</a></li>
             </ul>
         </div>

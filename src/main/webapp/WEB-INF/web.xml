@@ -42,7 +42,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DownloadJSP</servlet-name>
-        <url-pattern>/download</url-pattern>
+        <url-pattern>/downloads</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>ContactJsp</servlet-name>
