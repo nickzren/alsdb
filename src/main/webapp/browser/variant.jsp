@@ -27,7 +27,7 @@
                 AF: <%=variant.getAF()%>
             </span>
             &nbsp;
-            <a class="btn btn-default" href="http://atavdb.org/Search?query=${query}" target="_blank">ATAVDB</a> 
+            <a class="btn btn-default" href="http://atavdb.org/variant/${query}" target="_blank">ATAVDB</a> 
             <%}%>
         </h4>
     </div>
