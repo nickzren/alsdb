@@ -23,9 +23,9 @@ public class DBManager {
     public static void init() throws Exception {
         if (connection == null || connection.isClosed()) {
             initDataFromSystemConfig();
-            Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
             connection = DriverManager.getConnection(
-                    dbUrl + "?"
+                    dbUrl + "?useSSL=false&"
                     + "user=" + dbUser
                     + "&password=" + dbPassword);
             statement = connection.createStatement();
