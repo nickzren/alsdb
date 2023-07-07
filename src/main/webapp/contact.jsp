@@ -28,31 +28,16 @@
 
 
                 <address>
-                    <strong>ALS Consortium</strong><br>
+                    <strong>Matthew Harms</strong><br>
                     Email: 
-                    <a href="mailto: alsdb@columbia.edu" target="_blank">
+                    <a href="mailto: matthew.harms@columbia.edu" target="_blank">
                         <i class="fa fa-envelope-o">
-                            alsdb@columbia.edu
+                            matthew.harms@columbia.edu
                         </i>
                     </a>
                 </address>
 
                 <address>
-                    <strong>Nick Ren</strong><br>
-                    Email: 
-                    <a href="mailto: z.ren@columbia.edu" target="_blank">
-                        <i class="fa fa-envelope-o">
-                            z.ren@columbia.edu
-                        </i>
-                    </a>
-                </address>
-
-                <address>
-                    <strong>
-                        <a class="black" href="http://igm.columbia.edu" target="_blank">
-                            Institute for Genomic Medicine
-                        </a>
-                    </strong><br>
                     Columbia University Medical Center<br>
                     701 W 168th Street<br>
                     Hammer Building 1408<br>
